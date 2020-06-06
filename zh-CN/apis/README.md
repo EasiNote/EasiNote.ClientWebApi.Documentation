@@ -20,7 +20,6 @@ window.external.InvokeMethod(JSON.stringify({ "method":"实际方法名", "args"
 
 ```ts
 interface WebToolParamModel {
-
     /**
     * 本次调用的唯一标识字符串，可任意生成，用于匹配针对此方法的回调函数。
     * 此属性为可选属性，如果不指定或指定为空字符串，则不会调用回调函数通知执行结果。
@@ -62,7 +61,6 @@ receive(signal: string, callback: Function) {
 
 ```ts
 interface WebToolReturnModel {
-
     /**
     * 如果在 InvokeMethod 的参数中指定了 Id 属性，那么在回调中的此 Id 属性将与之对应，表示这是针对那个特定调用的回调。
     */
