@@ -35,7 +35,7 @@ interface WebToolParamModel {
     * 调用此方法需要传入的参数。应该格式化成 JSON 字符串。
     * 需要注意的是，对于每个在 API 文档中提及的 API，方法应该传入的参数应遵循方法的参数定义，但最终必须在此格式化为 JSON 字符串。
     */
-    args: string
+    args?: string
 }
 ```
 

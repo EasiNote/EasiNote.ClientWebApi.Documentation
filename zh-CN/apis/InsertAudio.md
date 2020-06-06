@@ -11,7 +11,7 @@ void InsertAudio(InsertMediaModel model);
 ```ts
 interface InsertMediaModel {
     /**
-    * Url：背景图，资源字符串，支持 base64 和 data url。
+    * Url：资源字符串，支持 web url 和 data url。
     */
     url: string;
 

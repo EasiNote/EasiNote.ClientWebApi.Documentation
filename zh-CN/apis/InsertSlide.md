@@ -21,7 +21,7 @@ interface InsertSlideModel {
     background-color?: color;
 
     /**
-    * BackgroundImage：背景图。资源字符串，支持 base64 和 data url。
+    * BackgroundImage：背景图。资源字符串，支持 web url 和 data url。
     */
     background-image?: color
 }
