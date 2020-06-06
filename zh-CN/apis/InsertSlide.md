@@ -16,12 +16,12 @@ interface InsertSlideModel {
     index?: number;
 
     /**
-    * BackgroundColor：背景色，可选。形如 #50D67C。
+    * BackgroundColor：背景色，可选。颜色字符串，形如 #50D67C。
     */
-    background-color?: color
+    background-color?: color;
 
     /**
-    * BackgroundImage：背景图，支持 base64 和 web url。
+    * BackgroundImage：背景图。资源字符串，支持 base64 和 data url。
     */
     background-image?: color
 }
