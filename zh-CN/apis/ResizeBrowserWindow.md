@@ -31,6 +31,14 @@ interface BrowserWindowResizeModel {
 
 ## 调用示例
 
+向右下扩展：
+
 ```ts
 window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "args": JSON.stringify({ "frameWidth": 960, "frameHeight": 640 })}))
+```
+
+向四周扩展：
+
+```ts
+window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "args": JSON.stringify({ "frameWidth": 1280, "frameHeight": 720, "resizeDirection": "topLeftBottomRight" })}))
 ```
