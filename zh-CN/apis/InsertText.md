@@ -18,3 +18,9 @@ interface InsertTextModel {
     left: number;
 }
 ```
+
+## 调用示例
+
+```ts
+window.external.InvokeMethod(JSON.stringify({ "method": "InsertText", "args": JSON.stringify({ "text": "示例文字", "font-size": 24, "font-family": "Microsoft YaHei", "color": "#FFFFFF", "top": 100, "left": 100 })}))
+```

@@ -11,7 +11,7 @@ void InsertSlide(InsertSlideModel model);
 ```ts
 interface InsertSlideModel {
     /**
-    * InsertBeforeIndex：在第几页之前插入页面。不指定则紧跟在当前页后插入。
+    * InsertBeforeIndex：在第几页之前插入页面（序号从 0 开始）。不指定则紧跟在当前页后插入。
     */
     index?: number;
 
@@ -33,6 +33,23 @@ interface InsertSlideModel {
 
 ## 调用示例
 
+在当前页面后创建新的一页，并使用默认的页面背景设定。
+
 ```ts
-window.external.InvokeMethod('{"method":"InsertSlide"}')
+window.external.InvokeMethod(JSON.stringify({ "method": "InsertSlide" }))
+```
+
+```ts
+window.external.InvokeMethod(JSON.stringify({ "method": "InsertSlide", "args": "{}" }))
+```
+
+说明：
+
+1. `args` 参数可以不指定，可以指定成空字符串，也可以指定成空对象。
+1. 当不指定页面背景，将使用当前模板中的背景。
+
+插入到首页并使用位图背景：
+
+```js
+window.external.InvokeMethod(JSON.stringify({ "method": "InsertSlide", "args": JSON.stringify({ "index": 0, "background-image": "https://blog.walterlv.com/static/posts/2020-02-14-large-background-image.jpg" })}))
 ```

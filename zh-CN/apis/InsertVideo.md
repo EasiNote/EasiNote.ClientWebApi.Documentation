@@ -28,3 +28,9 @@ interface InsertMediaModel {
 ```
 
 关于资源字符串，请参阅：[资源类型](/zh-CN/basic-types/resource.md)。
+
+## 调用示例
+
+```ts
+window.external.InvokeMethod(JSON.stringify({ "method": "InsertVideo", "args": JSON.stringify({ "url": "http://localhost:5000/test.mp4", "top": 100, "left": 100 })}))
+```

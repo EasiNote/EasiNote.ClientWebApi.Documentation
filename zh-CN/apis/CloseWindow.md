@@ -24,3 +24,16 @@ interface WebToolParamModel {
 }
 ```
 
+## 调用示例
+
+```ts
+window.external.InvokeMethod(JSON.stringify({ "method": "CloseWindow" }))
+```
+
+```ts
+window.external.InvokeMethod(JSON.stringify({ "method": "CloseWindow", "args": "" }))
+```
+
+```ts
+window.external.InvokeMethod(JSON.stringify({ "method": "CloseWindow", "args": "{}" }))
+```

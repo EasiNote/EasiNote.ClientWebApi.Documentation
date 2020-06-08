@@ -13,7 +13,7 @@ window.external.Foo(JSON.stringify({ "propertyA": "valueA", "propertyB": { "key"
 不过，在插件机制中，为了保持与本机代码更好的兼容性，包括方法名在内的所有方法也都使用字符串参数，因此，实际上在随后的所有方法调用都应该遵循以下模式：
 
 ```js
-window.external.InvokeMethod(JSON.stringify({ "method":"实际方法名", "args": JSON.stringify({ "参数1": "值1", "参数2": "值2", "参数3": "值3" }) }))
+window.external.InvokeMethod(JSON.stringify({ "method": "实际方法名", "args": JSON.stringify({ "参数1": "值1", "参数2": "值2", "参数3": "值3" })}))
 ```
 
 其中，`InvokeMethod` 中传入对象的定义为：

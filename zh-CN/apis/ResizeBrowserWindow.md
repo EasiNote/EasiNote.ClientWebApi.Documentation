@@ -22,9 +22,15 @@ interface BrowserWindowResizeModel {
 
     /**
     * ResizeDirection：枚举值，可选：
-    *  - BottomRight：通过移动右下角的点来调整窗口大小。
-    *  - TopLeftBottomRight：通过向四周调整窗口边缘来调整窗口大小。
+    *  - bottomRight：通过移动右下角的点来调整窗口大小。
+    *  - topLeftBottomRight：通过向四周调整窗口边缘来调整窗口大小。
     */
     resizeDirection: string
 }
+```
+
+## 调用示例
+
+```ts
+window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "args": JSON.stringify({ "frameWidth": 960, "frameHeight": 640 })}))
 ```
