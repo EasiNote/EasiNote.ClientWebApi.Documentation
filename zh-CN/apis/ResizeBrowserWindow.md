@@ -21,11 +21,19 @@ interface BrowserWindowResizeModel {
     frameHeight: number;
 
     /**
+    * WindowContentLengthUnit：枚举值，可选：
+    *  - effectivePixel：有效像素（默认单位）。
+    *  - percentageToCurrentWindow：（目前尚不支持）通过向四周调整窗口边缘来调整窗口大小。
+    *  - percentageToCurrentScreen：相对于当前屏幕的百分比，1 表示最大化显示。（若要全屏，请调用 Web 全屏 API）
+    */
+    lengthUnit?: string
+
+    /**
     * ResizeDirection：枚举值，可选：
-    *  - bottomRight：通过移动右下角的点来调整窗口大小。
+    *  - bottomRight：通过移动右下角的点来调整窗口大小（默认行为）。
     *  - topLeftBottomRight：通过向四周调整窗口边缘来调整窗口大小。
     */
-    resizeDirection: string
+    resizeDirection?: string
 }
 ```
 
@@ -41,4 +49,24 @@ window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "
 
 ```ts
 window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "args": JSON.stringify({ "frameWidth": 1280, "frameHeight": 720, "resizeDirection": "topLeftBottomRight" })}))
+```
+
+向四周扩展至屏幕大小的 75%：
+
+```ts
+window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "args": JSON.stringify({ "frameWidth": 0.5, "frameHeight": 0.75, "lengthUnit": "percentageToCurrentScreen", "resizeDirection": "topLeftBottomRight" })}))
+```
+
+## 额外说明
+
+如果希望浏览器全屏，请直接调用全屏 API：
+
+```ts
+document.documentElement.webkitRequestFullscreen()
+```
+
+相应的，退出全屏：
+
+```ts
+document.webkitExitFullscreen()
 ```
