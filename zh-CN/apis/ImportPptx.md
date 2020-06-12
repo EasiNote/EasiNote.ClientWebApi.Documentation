@@ -16,7 +16,7 @@ interface ImportFileModel {
     url: string;
 
     /**
-    * FileType：文件类型，可传入 enbx 或 pptx，不区分大小写。
+    * fileType：文件类型，请始终指定为“pptx”。
     */
     fileType: string
 }
@@ -27,5 +27,5 @@ interface ImportFileModel {
 ## 调用示例
 
 ```ts
-window.external.InvokeMethod(JSON.stringify({ "method": "ImportPptx", "args": JSON.stringify({ "url": "http://localhost:5000/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.pptx" })}))
+window.external.InvokeMethod(JSON.stringify({ "method": "ImportPptx", "args": JSON.stringify({ "url": "http://localhost:5000/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.pptx", "fileType": "enbx" })}))
 ```

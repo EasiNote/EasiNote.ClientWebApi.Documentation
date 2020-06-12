@@ -13,7 +13,12 @@ interface ImportFileModel {
     /**
     * FileUrl：资源字符串，支持 web url 和 data url。
     */
-    url: string
+    url: string;
+
+    /**
+    * fileType：文件类型，请始终指定为“enbx”。
+    */
+    fileType: string
 }
 ```
 
@@ -22,5 +27,5 @@ interface ImportFileModel {
 ## 调用示例
 
 ```ts
-window.external.InvokeMethod(JSON.stringify({ "method": "ImportEnbx", "args": JSON.stringify({ "url": "http://localhost:5000/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.enbx" })}))
+window.external.InvokeMethod(JSON.stringify({ "method": "ImportEnbx", "args": JSON.stringify({ "url": "http://localhost:5000/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.enbx", "fileType": "enbx" })}))
 ```
