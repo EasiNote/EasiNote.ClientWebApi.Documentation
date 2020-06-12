@@ -27,5 +27,5 @@ interface ImportFileModel {
 ## 调用示例
 
 ```ts
-window.external.InvokeMethod(JSON.stringify({ "method": "ImportPptx", "args": JSON.stringify({ "url": "http://localhost:5000/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.pptx", "fileType": "enbx" })}))
+window.external.InvokeMethod(JSON.stringify({ "method": "ImportPptx", "args": JSON.stringify({ "url": "http://localhost:5000/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.pptx", "fileType": "pptx" })}))
 ```
