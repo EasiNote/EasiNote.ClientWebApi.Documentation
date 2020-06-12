@@ -1,4 +1,4 @@
-# 插入课件（PPTX）
+# 导入课件（PPTX）
 
 ## 方法原型
 
@@ -13,12 +13,7 @@ interface ImportFileModel {
     /**
     * FileUrl：资源字符串，支持 web url 和 data url。
     */
-    url: string;
-
-    /**
-    * fileType：文件类型，请始终指定为“pptx”。
-    */
-    fileType: string
+    url: string
 }
 ```
 
@@ -27,5 +22,5 @@ interface ImportFileModel {
 ## 调用示例
 
 ```ts
-window.external.InvokeMethod(JSON.stringify({ "method": "ImportPptx", "args": JSON.stringify({ "url": "http://localhost:5000/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.pptx", "fileType": "pptx" })}))
+window.external.InvokeMethod(JSON.stringify({ "method": "ImportPptx", "args": JSON.stringify({ "url": "http://localhost:5000/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.pptx" })}))
 ```
