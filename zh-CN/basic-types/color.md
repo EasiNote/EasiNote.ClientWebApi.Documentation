@@ -7,11 +7,4 @@
 
 *   #FFFFFFFF    #FFFFFF
 *    AARRGGBB     RRGGBB
-
-还支持以下缩写：
-
-#F = #FFFFFF
-#AB = #ABABAB
-#ABC = #AABBCC
-#ABCD = #AABBCCDD
 ```
