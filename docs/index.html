@@ -15,10 +15,20 @@
 
     <div id="app">
 
-        <div class="grid-content">
+        <el-button-group>
+            <el-button type="primary" @click="check2Tab(0)">1 通用回调 InvokeMethod</el-button>
+            <el-button type="primary" @click="check2Tab(1)">2 执行自定义方法</el-button>
+          </el-button-group>
+        
+        <div class="grid-content" v-if="showTabIndex === 0">
             <h3>1 执行通用回调 InvokeMethod</h3>
             <p>window.external.InvokeMethod(JSON.stringify({ "method": "实际方法名", "args": JSON.stringify({ "参数1": "值1",
                 "参数2": "值2", "参数3": "值3" })}))</p>
+
+            <el-link type="primary" target="_blank" href="https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/test/zh-CN/apis/README.md">
+                相关文档
+            </el-link>
+
             <h4>方法名</h4>
             <el-row type="flex" class="row-bg">
                 <el-col :span="4">
@@ -63,9 +73,7 @@
             <el-button type="primary" @click="invokeCommonMethod">执行</el-button>
         </div>
 
-        </br>
-
-        <div class="grid-content">
+        <div class="grid-content" v-if="showTabIndex === 1">
             <h3>2 执行自定义方法</h3>
             <p>window.external.{自定义方法}("参数1","参数2")</p>
             <h4>方法名</h4>
@@ -123,10 +131,11 @@
             commonMethodParamValue1: "",
             commonMethodParamName2: "",
             commonMethodParamValue2: "",
+            showTabIndex: 1,
         },
         methods: {
 
-            invokeCommonMethod: function () {
+            invokeCommonMethod() {
                 let pn1 = this.commonMethodParamName1;
                 let pn2 = this.commonMethodParamName2;
                 let p1 = this.commonMethodParamValue1;
@@ -143,7 +152,7 @@
                 )
             },
 
-            invokeCustomMethod: function () {
+            invokeCustomMethod() {
                 let code = `window.external.${this.commonMethodName}()`;
                 let param1 = `${this.commonMethodParamValue1}`;
                 let param2 = `${this.commonMethodParamValue2}`;
@@ -155,6 +164,10 @@
                     code = `window.external.${this.commonMethodName}(param1, param2)`;
                 }
                 eval(code);
+            },
+
+            check2Tab(tabIndex){
+                this.showTabIndex = tabIndex;
             }
 
         }
