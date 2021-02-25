@@ -34,6 +34,7 @@ window.external.InvokeMethod(JSON.stringify({ "method": "CloseWindow" }))
 window.external.InvokeMethod(JSON.stringify({ "method": "CloseWindow", "args": "" }))
 ```
 
+
 ```ts
 window.external.InvokeMethod(JSON.stringify({ "method": "CloseWindow", "args": "{}" }))
 ```
