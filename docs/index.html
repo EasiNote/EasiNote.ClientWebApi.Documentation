@@ -49,7 +49,7 @@
 
                 <el-col :span="20">
                     <div class="grid-content bg-purple-light">
-                        <el-input type="textarea" :rows="2" v-model="commonMethodParamValue1" placeholder="参数值1">
+                        <el-input type="textarea" :rows="4" v-model="commonMethodParamValue1" placeholder="参数值1">
                         </el-input>
                     </div>
                 </el-col>
@@ -64,7 +64,7 @@
 
                 <el-col :span="20">
                     <div class="grid-content bg-purple-light">
-                        <el-input type="textarea" :rows="2" v-model="commonMethodParamValue2" placeholder="参数值2">
+                        <el-input type="textarea" :rows="4" v-model="commonMethodParamValue2" placeholder="参数值2">
                         </el-input>
                     </div>
                 </el-col>
@@ -90,7 +90,7 @@
             <el-row class="row-bg" gutter="20">
                 <el-col :span="20">
                     <div class="grid-content bg-purple-light">
-                        <el-input type="textarea" :rows="2" v-model="commonMethodParamValue1" placeholder="参数值1">
+                        <el-input type="textarea" :rows="6" v-model="commonMethodParamValue1" placeholder="参数值1">
                         </el-input>
                     </div>
                 </el-col>
@@ -99,13 +99,13 @@
             <el-row class="row-bg" gutter="20">
                 <el-col :span="20">
                     <div class="grid-content bg-purple-light">
-                        <el-input type="textarea" :rows="2" v-model="commonMethodParamValue2" placeholder="参数值2">
+                        <el-input type="textarea" :rows="6" v-model="commonMethodParamValue2" placeholder="参数值2">
                         </el-input>
                     </div>
                 </el-col>
             </el-row>
 
-            <el-button type="primary" @click="invokeCustomMethod">执行</el-button>
+            <el-button style="margin: 1em 0em" type="primary" @click="invokeCustomMethod">执行</el-button>
         </div>
 
     </div>
