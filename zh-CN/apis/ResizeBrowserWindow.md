@@ -11,12 +11,21 @@ void ResizeBrowserWindow(BrowserWindowResizeModel model);
 ```ts
 interface BrowserWindowResizeModel {
     /**
-    * FrameWidth：页面内容需要的宽度，浏览器宽度将依此设置以满足内容宽度。
+    * FrameX：页面内容离屏幕X坐标（可空）。
+    */
+    frameX: number;
+
+    /**
+    * FrameY：页面内容离屏幕Y坐标（可空）。
+    */
+    frameY: number;
+    /**
+    * FrameWidth：页面内容需要的宽度，浏览器宽度将依此设置以满足内容宽度（可空）。
     */
     frameWidth: number;
 
     /**
-    * FrameHeight：页面内容需要的高度，浏览器宽度将依此设置，在可能的情况下尽量满足内容高度，不满足会显示滚动条。
+    * FrameHeight：页面内容需要的高度，浏览器宽度将依此设置，在可能的情况下尽量满足内容高度，不满足会显示滚动条（可空）。
     */
     frameHeight: number;
 
@@ -38,6 +47,12 @@ interface BrowserWindowResizeModel {
 ```
 
 ## 调用示例
+
+设置位置：
+
+```ts
+window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "args": JSON.stringify({ "frameX": 200, "frameY": 300 })}))
+```
 
 向右下扩展：
 
