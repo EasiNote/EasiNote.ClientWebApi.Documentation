@@ -125,26 +125,34 @@
             commonMethodParamValue2: "",
         },
         methods: {
-            
+
             invokeCommonMethod: function () {
+                let pn1 = this.commonMethodParamName1;
+                let pn2 = this.commonMethodParamName2;
+                let p1 = this.commonMethodParamValue1;
+                let p2 = this.commonMethodParamValue2;
+
                 window.external.InvokeMethod(
                     JSON.stringify({
-                        "method": commonInvokeMethod,
+                        "method": this.commonInvokeMethod,
                         "args": JSON.stringify({
-                            commonMethodParamName1: commonMethodParamValue1,
-                            commonMethodParamName2: commonMethodParamValue2
+                            pn1: p1,
+                            pn2: p2
                         })
                     })
                 )
             },
 
             invokeCustomMethod: function () {
-                let code = `window.external.${commonMethodName}()`;
-                if (!isEmpty(commonMethodParamValue1)){
-                    code = `window.external.${commonMethodName}(${commonMethodParamValue1})`;
+                let code = `window.external.${this.commonMethodName}()`;
+                let param1 = `${this.commonMethodParamValue1}`;
+                let param2 = `${this.commonMethodParamValue2}`;
+
+                if (!isEmpty(this.commonMethodParamValue1)) {
+                    code = `window.external.${this.commonMethodName}(param1)`;
                 }
-                if(!isEmpty(commonMethodParamValue2)){
-                    code = `window.external.${commonMethodName}(${commonMethodParamValue1},${commonMethodParamValue2})`;
+                if (!isEmpty(this.commonMethodParamValue2)) {
+                    code = `window.external.${this.commonMethodName}(param1, param2)`;
                 }
                 eval(code);
             }
