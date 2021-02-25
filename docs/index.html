@@ -18,6 +18,7 @@
         <el-button-group>
             <el-button type="primary" @click="check2Tab(0)">1 通用回调 InvokeMethod</el-button>
             <el-button type="primary" @click="check2Tab(1)">2 执行自定义方法</el-button>
+            <el-button type="primary" @click="check2Tab(2)">3 创建 web presentation card 元素</el-button>
         </el-button-group>
 
         <div class="grid-content" v-if="showTabIndex === 0">
@@ -126,6 +127,106 @@
             <el-button style="margin: 1em 0em" type="primary" @click="invokeCustomMethod">执行</el-button>
         </div>
 
+        <div class="grid-content" v-if="showTabIndex === 2">
+            <h3>3 创建 web presentation card 元素</h3>
+
+            <h4>创建参数</h4>
+            <el-row type="flex" class="row-bg">
+                <el-col :span="18">
+                    <div class="grid-content bg-purple-light">
+
+                        <el-form label-position="right" label-width="360px" :model="webPresentationCard">
+                            <el-form-item label="标签(CardTag)">
+                                <el-input v-model="webPresentationCard.cardTag"></el-input>
+                            </el-form-item>
+                            <el-form-item label="标题(title)">
+                                <el-input v-model="webPresentationCard.title"></el-input>
+                            </el-form-item>
+                            <el-form-item label="点击标题(clickTitle)">
+                                <el-input v-model="webPresentationCard.clickTitle"></el-input>
+                            </el-form-item>
+                            <el-form-item label="断网点击标题(offlineClickTitle)">
+                                <el-input v-model="webPresentationCard.offlineClickTitle"></el-input>
+                            </el-form-item>
+                            <el-form-item label="备课端web页(editingUrl)">
+                                <el-input v-model="webPresentationCard.editingUrl"></el-input>
+                            </el-form-item>
+                            <el-form-item label="授课端web页(displayUrl)">
+                                <el-input v-model="webPresentationCard.displayUrl"></el-input>
+                            </el-form-item>
+                            <el-form-item label="备课端窗口大小(editingPresentationSize)">
+                                <el-row class="row-bg">
+                                    <el-col :span="6">
+                                        <div class="grid-content bg-purple-light">
+                                            <el-input v-model="webPresentationCard.editingPresentationSize.width">
+                                            </el-input>
+                                        </div>
+                                    </el-col>
+                                    <el-col :span="6">
+                                        <div class="grid-content bg-purple-light">
+                                            <el-input v-model="webPresentationCard.editingPresentationSize.height">
+                                            </el-input>
+                                        </div>
+                                    </el-col>
+                                </el-row>
+                            </el-form-item>
+                            <el-form-item label="授课端窗口大小(displayPresentationSize)">
+                                <el-row class="row-bg">
+                                    <el-col :span="6">
+                                        <div class="grid-content bg-purple-light">
+                                            <el-input v-model="webPresentationCard.displayPresentationSize.width">
+                                            </el-input>
+                                        </div>
+                                    </el-col>
+                                    <el-col :span="6">
+                                        <div class="grid-content bg-purple-light">
+                                            <el-input v-model="webPresentationCard.displayPresentationSize.height">
+                                            </el-input>
+                                        </div>
+                                    </el-col>
+                                </el-row>
+                            </el-form-item>
+                            <el-form-item label="web 页窗口标题(presentationWindowTitle)">
+                                <el-input v-model="webPresentationCard.presentationWindowTitle"></el-input>
+                            </el-form-item>
+                            <el-form-item label="备课端 web 页窗口 icon (editingWindowIconUri)">
+                                <el-input v-model="webPresentationCard.editingWindowIconUri"></el-input>
+                            </el-form-item>
+                            <el-form-item label="授课端 web 页窗口 icon (displayWindowIconUri)">
+                                <el-input v-model="webPresentationCard.displayWindowIconUri"></el-input>
+                            </el-form-item>
+                            <el-form-item label="授课端 web 页窗口的显示模式(displayMode)">
+                                <el-select v-model="webPresentationCard.displayMode" placeholder="请选择">
+                                    <el-option v-for="item in displayModeOptions" :key="item.value" :label="item.label"
+                                        :value="item.value">
+                                    </el-option>
+                                </el-select>
+                            </el-form-item>
+                            <el-form-item label="备课端元素缩放模式(zoomMode)">
+                                <el-select v-model="webPresentationCard.zoomMode" placeholder="请选择">
+                                    <el-option v-for="item in zoomModeOptions" :key="item.value" :label="item.label"
+                                        :value="item.value">
+                                    </el-option>
+                                </el-select>
+                            </el-form-item>
+
+
+                        </el-form>
+
+                    </div>
+                </el-col>
+
+                <el-col :span="6">
+                    <el-input type="textarea" :rows="36" v-model="webPresentationCardJson">
+                    </el-input>
+                </el-col>
+
+            </el-row>
+
+            <el-button style="margin: 1em 0em" type="primary" @click="createWebPresentationCord">创建 web presentation card 元素</el-button>
+
+        </div>
+
     </div>
 </body>
 
@@ -154,13 +255,53 @@
             methodOptions: [{
                 value: 'InsertElement',
                 label: 'InsertElement'
-            },{
+            }, {
                 value: 'InsertElementByJson',
                 label: 'InsertElementByJson'
             }, {
                 value: 'InsertMedia',
                 label: 'InsertMedia'
             }, ],
+
+            webPresentationCard: {
+                cardTag: 'TEST',
+                title: '测试标题',
+                thumbnailUri: 'http://n.sinaimg.cn/sinakd20200605ac/416/w640h576/20200605/301b-iurnkpq9297963.jpg',
+                clickTitle: '点击',
+                offlineClickTitle: '网络错误',
+                editingUrl: 'https://bilibili.com',
+                displayUrl: 'https://www.zhihu.com/',
+                editingPresentationSize: {
+                    width: 1000,
+                    height: 500,
+                },
+                displayPresentationSize: {
+                    width: 1000,
+                    height: 500,
+                },
+                presentationWindowTitle: '窗口标题',
+                editingWindowIconUri: 'http://n.sinaimg.cn/sinakd20200605ac/186/w640h346/20200605/a50a-iurnkpq9297973.jpg',
+                displayWindowIconUri: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4267424444,91867147&fm=26&gp=0.jpg',
+                displayMode: 'Window',
+                zoomMode: 'Scale'
+            },
+
+            displayModeOptions: [{
+                value: 'Window',
+                label: 'Window'
+            }, {
+                value: 'FullScreen',
+                label: 'FullScreen'
+            }, ],
+
+            zoomModeOptions: [{
+                value: 'Scale',
+                label: 'Scale'
+            }, {
+                value: 'Adaptive',
+                label: 'Adaptive'
+            }, ],
+
         },
         computed: {
             resultJsCode1: function () {
@@ -182,7 +323,7 @@
                 return code;
             },
 
-            commonInvokeMethodJson: function(){
+            commonInvokeMethodJson: function () {
                 let methodName = this.commonMethodName;
                 let pn1 = this.commonMethodParamName1;
                 let pn2 = this.commonMethodParamName2;
@@ -197,6 +338,10 @@
                     "method": methodName,
                     "args": params
                 });
+            },
+
+            webPresentationCardJson: function () {
+                return JSON.stringify(this.webPresentationCard, null, 2);
             }
 
         },
@@ -224,7 +369,11 @@
 
             check2Tab(tabIndex) {
                 this.showTabIndex = tabIndex;
-            }
+            },
+
+            createWebPresentationCord(){
+                window.external.InsertElementByJson('WebPresentationCard', webPresentationCardJson);
+            },
 
         }
     });
