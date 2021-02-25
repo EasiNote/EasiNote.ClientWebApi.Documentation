@@ -233,10 +233,10 @@
 
             <h4>参数</h4>
             <el-row type="flex" class="row-bg">
-                <el-col :span="18">
+                <el-col :span="16">
                     <div class="grid-content bg-purple-light">
 
-                        <el-form label-position="right" label-width="360px" :model="insertMediaData">
+                        <el-form label-position="right" label-width="240px" :model="insertMediaData">
                             <el-form-item label="下载链接(url)">
                                 <el-input v-model="insertMediaData.url"></el-input>
                             </el-form-item>
@@ -258,7 +258,7 @@
                     </div>
                 </el-col>
 
-                <el-col :span="6">
+                <el-col :span="8">
                     <el-input type="textarea" :rows="10" v-model="insertMediaDataJson">
                     </el-input>
                 </el-col>
