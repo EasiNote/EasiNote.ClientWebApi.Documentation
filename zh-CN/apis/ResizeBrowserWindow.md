@@ -42,6 +42,9 @@ interface BrowserWindowResizeModel {
     * ResizeDirection：枚举值，可选：
     *  - bottomRight：通过移动右下角的点来调整窗口大小（默认行为）。
     *  - topLeftBottomRight：通过向四周调整窗口边缘来调整窗口大小。
+    *  - bottomLeft：通过移动左下角的点来调整窗口大小。
+    *  - topRight：通过移动右上角的点来调整窗口大小。
+    *  - topLeft：通过移动左上角的点来调整窗口大小。
     */
     resizeDirection?: string
 }
@@ -58,13 +61,31 @@ window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "
 向右下扩展：
 
 ```ts
-window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "args": JSON.stringify({ "frameWidth": 960, "frameHeight": 640 })}))
+window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "args": JSON.stringify({ "frameWidth": 960, "frameHeight": 640, "resizeDirection": "bottomRight" })}))
 ```
 
 向四周扩展：
 
 ```ts
 window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "args": JSON.stringify({ "frameWidth": 1280, "frameHeight": 720, "resizeDirection": "topLeftBottomRight" })}))
+```
+
+向左下扩展：
+
+```ts
+window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "args": JSON.stringify({ "frameWidth": 1280, "frameHeight": 720, "resizeDirection": "bottomLeft" })}))
+```
+
+向右上扩展：
+
+```ts
+window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "args": JSON.stringify({ "frameWidth": 1280, "frameHeight": 720, "resizeDirection": "topRight" })}))
+```
+
+向左上扩展：
+
+```ts
+window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindow", "args": JSON.stringify({ "frameWidth": 1280, "frameHeight": 720, "resizeDirection": "topLeft" })}))
 ```
 
 向四周扩展至屏幕大小的 75%：
