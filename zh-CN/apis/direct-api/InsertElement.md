@@ -3,7 +3,7 @@
 ## API
 
 ```js
-window.external.InsertElement("元素类型名称", "{元素数据描述的 Json 对象}")
+window.external.InsertElementByJson("元素类型名称", "{元素数据描述的 Json 对象}")
 ```
 
 ### 参数说明
