@@ -11,22 +11,18 @@ window.external.InsertElementByJson("WebPresentationCard", "{元素数据描述�
 
 ## 属性说明
 
-| 属性协议名              | 类型   | 描述                        | 默认       | 备注                                   |
-|-------------------------|--------|---------------------------|------------|----------------------------------------|
-| cardTag                 | String | 卡片的类型标记              |            |                                        |
-| title                   | String | 标题                        |            | —                                      |
-| thumbnailUri            | String | 缩列图                      |            | —                                      |
-| clickTitle              | String | 点击按钮的标题              | 打开       | —                                      |
-| offlineClickTitle       | String | 断网时的按钮标题（授课有效）  | 网络异常   |                                        |
-| editingUrl              | String | 备课端内容的URL             |            |                                        |
-| displayUrl              | String | 授课端内容的URL             |            |                                        |
-| editingPresentationSize | Size   | 备课下打开的 web 窗口的大小 |            |                                        |
-| displayPresentationSize | Size   | 授课下打开的 web 窗口的大小 |            | DisplayMode 为 Window 时有效。          |
-| presentationWindowTitle | String | Web内容窗口的标题           |            |                                        |
-| editingWindowIconUri    | String | 备课端Web内容窗口的Icon     |            |                                        |
-| displayWindowIconUri    | String | 授课端Web内容窗口的Icon     |            |                                        |
-| displayMode             | String | 授课端的web内容显示模式     | FullScreen | Window(窗口显示);FullScreen(全屏显示); |
-| zoomMode                | String | 卡片缩放模式（备课有效）      | Scale      | Scale(等比缩放);Adaptive(自适应);      |
+| 属性协议名       | 类型   | 必需 | 描述                        | 默认       | 备注                                               |
+|------------------|--------|-----|---------------------------|------------|----------------------------------------------------|
+| tag              | String | 是   | 卡片的类型标记              |            | 业务标记，区分不同元素，类似 seewo-tiku seewo-huaban |
+| title            | String | 是   | 卡片上的标题                |            |                                                    |
+| thumbnailUrl     | String | 是   | 卡片中的缩列图              |            |                                                    |
+| buttonContent    | String | 是   | 卡片下方的点击按钮的标题    | 打开       |                                                    |
+| editingUrl       | String | 是   | 备课端内容的URL             |            |                                                    |
+| displayUrl       | String | 是   | 授课端内容的URL             |            |                                                    |
+| editingFrameSize | Size   | 是   | 备课下打开的 web 页面的大小 |            |                                                    |
+| displayFrameSize | Size   | 是   | 授课下打开的 web 页面的大小 |            | DisplayMode 为 Window 时有效。                      |
+| displayMode      | String | 否   | 授课端的web内容显示模式     | FullScreen | Window(以窗口形式显示) FullScreen(全屏显示)        |
+| layoutSize       | Size   | 是   | 元素初始大小                |            | 宽度最小值：1 高度最小值：80；参考值：(200,200)        |
 
 ## json 文件示例
 
