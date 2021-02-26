@@ -20,7 +20,7 @@
 | editingWindowIconUri    | String | 备课端Web内容窗口的Icon     |            |                                        |
 | displayWindowIconUri    | String | 授课端Web内容窗口的Icon     |            |                                        |
 | displayMode             | String | 授课端的web内容显示模式     | FullScreen | Window(窗口显示);FullScreen(全屏显示); |
-| zoomMode                | String | 卡片缩放模式                | Scale      | Scale(等比缩放);Adaptive(自适应);      |
+| zoomMode                | String | 卡片缩放模式（备课有效）      | Scale      | Scale(等比缩放);Adaptive(自适应);      |
 
 ## json 文件示例
 

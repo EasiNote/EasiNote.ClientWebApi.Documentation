@@ -18,9 +18,9 @@ window.external.InsertElement("元素类型名称", "{元素数据描述的 Json
 
 这个与具体的元素类型相关，不同的类型，描述信息可能不一样。
 
-## 具体元素说明
+## 具体元素
 
-* [Web内容呈现卡片（WebPresentationCard）](./element-json/web-presentation-card.md)
+1 [Web内容呈现卡片（WebPresentationCard）](./element-json/web-presentation-card.md)
 
 ## 测试页面
 
