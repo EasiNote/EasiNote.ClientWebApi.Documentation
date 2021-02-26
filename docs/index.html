@@ -257,7 +257,7 @@
                             <el-form-item label="文件名(fileName) 必须有后缀">
                                 <el-input v-model="insertMediaData.fileName"></el-input>
                             </el-form-item>
-                            <el-form-item label="音视频插入类型(mode)">
+                            <!-- <el-form-item label="音视频插入类型(mode)">
                                 <el-select v-model="insertMediaData.mode" placeholder="请选择">
                                     <el-option v-for="item in mediaInsertModeOptions" :key="item.value"
                                         :label="item.label" :value="item.value">
@@ -266,14 +266,14 @@
                             </el-form-item>
                             <el-form-item label="是否自动播放(isAutoPlay)">
                                 <el-checkbox v-model="insertMediaData.isAutoPlay">是否自动播放</el-checkbox>
-                            </el-form-item>
+                            </el-form-item> -->
                         </el-form>
 
                     </div>
                 </el-col>
 
                 <el-col :span="8">
-                    <el-input type="textarea" :rows="10" v-model="insertMediaDataJson">
+                    <el-input type="textarea" :rows="4" v-model="insertMediaDataJson">
                     </el-input>
                 </el-col>
 
@@ -363,8 +363,8 @@
             insertMediaData: {
                 url: "http://vfx.mtime.cn/Video/2019/03/19/mp4/190319212559089721.mp4",
                 fileName: "测试.mp4",
-                mode: "online",
-                isAutoPlay: true
+                // mode: "online",
+                // isAutoPlay: true
             },
 
             mediaInsertModeOptions: [{
