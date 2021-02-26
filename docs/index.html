@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        .el-form-item {margin-bottom: 10px;}  
+    </style>
     <title>EasiNote 前端回调测试</title>
 </head>
 
@@ -136,7 +139,7 @@
                 <el-col :span="18">
                     <div class="grid-content bg-purple-light">
 
-                        <el-form label-position="right" label-width="360px" :model="webPresentationCard">
+                        <el-form label-position="right" label-width="360px" :model="webPresentationCard" size="medium">
                             <el-form-item label="标签(CardTag)">
                                 <el-input v-model="webPresentationCard.cardTag"></el-input>
                             </el-form-item>
@@ -159,7 +162,7 @@
                                 <el-input v-model="webPresentationCard.displayUrl"></el-input>
                             </el-form-item>
                             <el-form-item label="备课端窗口大小(editingPresentationSize)">
-                                <el-row class="row-bg">
+                                <el-row class="row-bg" gutter="5">
                                     <el-col :span="6">
                                         <div class="grid-content bg-purple-light">
                                             <el-input v-model="webPresentationCard.editingPresentationSize.width">
@@ -175,7 +178,7 @@
                                 </el-row>
                             </el-form-item>
                             <el-form-item label="授课端窗口大小(displayPresentationSize)">
-                                <el-row class="row-bg">
+                                <el-row class="row-bg" gutter="5">
                                     <el-col :span="6">
                                         <div class="grid-content bg-purple-light">
                                             <el-input v-model="webPresentationCard.displayPresentationSize.width">
@@ -221,7 +224,7 @@
                 </el-col>
 
                 <el-col :span="6">
-                    <el-input type="textarea" :rows="38" v-model="webPresentationCardJson">
+                    <el-input type="textarea" :rows="30" v-model="webPresentationCardJson">
                     </el-input>
                 </el-col>
 
