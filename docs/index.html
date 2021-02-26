@@ -232,7 +232,7 @@
 
             </el-row>
 
-            <el-button style="margin: 1em 0em" type="primary" @click="createWebPresentationCord">创建 web presentation
+            <el-button style="margin-left: 10em;" type="primary" @click="createWebPresentationCord">创建 web presentation
                 card 元素</el-button>
 
         </div>
@@ -247,7 +247,7 @@
 
             <h4>参数</h4>
             <el-row type="flex" class="row-bg" gutter="5">
-                <el-col :span="16">
+                <el-col :span="22">
                     <div class="grid-content bg-purple-light">
 
                         <el-form label-position="right" label-width="240px" :model="insertMediaData">
@@ -272,15 +272,18 @@
                     </div>
                 </el-col>
 
-                <el-col :span="8">
-                    <el-input type="textarea" :rows="4" v-model="insertMediaDataJson">
-                    </el-input>
-                </el-col>
-
             </el-row>
 
-            <el-button style="margin: 1em 0em" type="primary" @click="insertMediaElement">创建 web presentation card 元素
-            </el-button>
+            <el-row type="flex" class="row-bg" gutter="5" style="margin-left: 2em; margin-right: 10em;">
+                <el-input type="textarea" :rows="4" v-model="insertMediaDataJson">
+                </el-input>
+            </el-row>
+
+            <el-row type="flex" class="row-bg" gutter="5" style="margin-left: 2em; margin-right: 10em;">
+                <el-button style="margin: 1em 0em" type="primary" @click="insertMediaElement">创建 web presentation card 元素
+                </el-button>
+            </el-row>
+
 
         </div>
 
