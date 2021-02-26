@@ -1,5 +1,6 @@
 # 关闭窗口
 
+
 关闭当前承载此 Web 页面的浏览器窗口（或容器）。
 
 ## 方法原型
@@ -33,6 +34,7 @@ window.external.InvokeMethod(JSON.stringify({ "method": "CloseWindow" }))
 ```ts
 window.external.InvokeMethod(JSON.stringify({ "method": "CloseWindow", "args": "" }))
 ```
+
 
 ```ts
 window.external.InvokeMethod(JSON.stringify({ "method": "CloseWindow", "args": "{}" }))
