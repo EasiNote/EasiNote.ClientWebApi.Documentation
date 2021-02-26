@@ -3,6 +3,12 @@
 示例：
 [《Web内容卡片元素》](https://r302.cc/4z6Vvlp?platform=enpc&channel=copylink)
 
+## API
+
+```js
+window.external.InsertElementByJson("WebPresentationCard", "{元素数据描述的 Json 对象}")
+```
+
 ## 属性说明
 
 | 属性协议名              | 类型   | 描述                        | 默认       | 备注                                   |
