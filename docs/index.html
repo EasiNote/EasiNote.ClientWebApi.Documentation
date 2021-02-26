@@ -132,7 +132,7 @@
             <h3>3 创建 web presentation card 元素</h3>
 
             <h4>创建参数</h4>
-            <el-row type="flex" class="row-bg">
+            <el-row class="row-bg" gutter="5">
                 <el-col :span="18">
                     <div class="grid-content bg-purple-light">
 
@@ -148,6 +148,9 @@
                             </el-form-item>
                             <el-form-item label="断网点击标题(offlineClickTitle)">
                                 <el-input v-model="webPresentationCard.offlineClickTitle"></el-input>
+                            </el-form-item>
+                            <el-form-item label="缩略图(thumbnailUri)">
+                                <el-input v-model="webPresentationCard.thumbnailUri"></el-input>
                             </el-form-item>
                             <el-form-item label="备课端web页(editingUrl)">
                                 <el-input v-model="webPresentationCard.editingUrl"></el-input>
@@ -218,7 +221,7 @@
                 </el-col>
 
                 <el-col :span="6">
-                    <el-input type="textarea" :rows="36" v-model="webPresentationCardJson">
+                    <el-input type="textarea" :rows="38" v-model="webPresentationCardJson">
                     </el-input>
                 </el-col>
 
@@ -232,7 +235,7 @@
             <h3>4 插入多媒体（图片，音视频）元素</h3>
 
             <h4>参数</h4>
-            <el-row type="flex" class="row-bg">
+            <el-row type="flex" class="row-bg" gutter="5">
                 <el-col :span="16">
                     <div class="grid-content bg-purple-light">
 
