@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <style>
-        .el-form-item {margin-bottom: 10px;}  
+        .el-form-item {
+            margin-bottom: 10px;
+        }
     </style>
     <title>EasiNote 前端回调测试</title>
 </head>
@@ -134,6 +136,11 @@
         <div class="grid-content" v-if="showTabIndex === 2">
             <h3>3 创建 web presentation card 元素</h3>
 
+            <el-link type="primary" target="_blank"
+                href="https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/direct-api/element-json/web-presentation-card.md">
+                相关文档
+            </el-link>
+
             <h4>创建参数</h4>
             <el-row class="row-bg" gutter="5">
                 <el-col :span="18">
@@ -230,12 +237,18 @@
 
             </el-row>
 
-            <el-button style="margin: 1em 0em" type="primary" @click="createWebPresentationCord">创建 web presentation card 元素</el-button>
+            <el-button style="margin: 1em 0em" type="primary" @click="createWebPresentationCord">创建 web presentation
+                card 元素</el-button>
 
         </div>
 
         <div class="grid-content" v-if="showTabIndex === 3">
             <h3>4 插入多媒体（图片，音视频）元素</h3>
+
+            <el-link type="primary" target="_blank"
+                href="https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/direct-api/InsertMedia.md">
+                相关文档
+            </el-link>
 
             <h4>参数</h4>
             <el-row type="flex" class="row-bg" gutter="5">
@@ -251,8 +264,8 @@
                             </el-form-item>
                             <el-form-item label="音视频插入类型(mode)">
                                 <el-select v-model="insertMediaData.mode" placeholder="请选择">
-                                    <el-option v-for="item in mediaInsertModeOptions" :key="item.value" :label="item.label"
-                                        :value="item.value">
+                                    <el-option v-for="item in mediaInsertModeOptions" :key="item.value"
+                                        :label="item.label" :value="item.value">
                                     </el-option>
                                 </el-select>
                             </el-form-item>
@@ -271,7 +284,8 @@
 
             </el-row>
 
-            <el-button style="margin: 1em 0em" type="primary" @click="insertMediaElement">创建 web presentation card 元素</el-button>
+            <el-button style="margin: 1em 0em" type="primary" @click="insertMediaElement">创建 web presentation card 元素
+            </el-button>
 
         </div>
 
@@ -352,14 +366,14 @@
                 label: 'Adaptive'
             }, ],
 
-            insertMediaData:{
-                url: "https://img.nga.178.com/attachments/mon_201911/08/-9lddQ5-fnlpXoZ6mT3cSu0-1o0.png",
-                fileName: "测试图片.png",
+            insertMediaData: {
+                url: "http://vfx.mtime.cn/Video/2019/03/19/mp4/190319212559089721.mp4",
+                fileName: "测试.mp4",
                 mode: "online",
                 isAutoPlay: true
             },
 
-            mediaInsertModeOptions:[{
+            mediaInsertModeOptions: [{
                 value: 'online',
                 label: 'online'
             }, {
@@ -440,11 +454,11 @@
                 this.showTabIndex = tabIndex;
             },
 
-            createWebPresentationCord(){
+            createWebPresentationCord() {
                 window.external.InsertElementByJson('WebPresentationCard', this.webPresentationCardJson);
             },
 
-            insertMediaElement(){
+            insertMediaElement() {
                 window.external.InsertMedia(this.insertMediaDataJson);
             },
 
