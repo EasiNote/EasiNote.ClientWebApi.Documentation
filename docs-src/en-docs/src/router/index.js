@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Debug1InvokeMethod from '../components/Debug1InvokeMethod.vue'
 
 Vue.use(VueRouter)
+
+const DebugPage1 = () => import('../components/DebugPage1.vue')
+const DebugPage2 = () => import('../components/DebugPage2.vue')
 
 const routes = [{
     path: '/',
@@ -11,18 +13,14 @@ const routes = [{
     component: Home
   },
   {
-    path: "/d1",
-    component: () => import('../components/Debug1InvokeMethod.vue')
-    // component: Debug1InvokeMethod
+    path: "/debugPage1",
+    component: DebugPage1
   },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import( /* webpackChunkName: "about" */ '../views/About.vue')
-  // }
+  {
+    path: "/debugPage2",
+    component: DebugPage2
+  }
+
 ]
 
 const router = new VueRouter({

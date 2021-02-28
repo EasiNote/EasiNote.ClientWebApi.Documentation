@@ -15,10 +15,10 @@
       相关文档
     </el-link>
 
-    <p>将要执行的语句是：{{ resultJsCode1 }}</p>
+    <p>将要执行的语句是：{{ resultJsCode }}</p>
 
     <h4>方法名</h4>
-    <el-row type="flex" class="row-bg">
+    <el-row class="row-bg">
       <el-col :span="4">
         <div class="grid-content bg-purple-light">
           <el-select
@@ -42,7 +42,7 @@
 
     <h4>参数</h4>
 
-    <el-row class="row-bg" :gutter="20">
+    <el-row class="row-bg" :gutter="20" style="margin-bottom:1em">
       <el-col :span="4">
         <div class="grid-content bg-purple-light">
           <el-input
@@ -52,7 +52,7 @@
         </div>
       </el-col>
 
-      <el-col :span="20">
+      <el-col :span="18">
         <div class="grid-content bg-purple-light">
           <el-input
             type="textarea"
@@ -75,7 +75,7 @@
         </div>
       </el-col>
 
-      <el-col :span="20">
+      <el-col :span="18">
         <div class="grid-content bg-purple-light">
           <el-input
             type="textarea"
@@ -94,7 +94,7 @@
 
 <script>
 export default {
-  name: "Debug1InvokeMethod",
+  name: "DebugPage1",
 
   data() {
     return {
@@ -110,10 +110,6 @@ export default {
           label: "InsertElement",
         },
         {
-          value: "InsertElementByJson",
-          label: "InsertElementByJson",
-        },
-        {
           value: "InsertMedia",
           label: "InsertMedia",
         },
@@ -122,7 +118,7 @@ export default {
   },
 
   computed: {
-    resultJsCode1: function () {
+    resultJsCode: function () {
       return `window.external.InvokeMethod("${this.commonInvokeMethodJson}")`;
     },
 
