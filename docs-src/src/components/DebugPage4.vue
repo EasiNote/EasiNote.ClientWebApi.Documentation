@@ -60,7 +60,8 @@
         style="margin: 1em 0em"
         type="primary"
         @click="insertMediaElement"
-        >创建 web presentation card 元素
+      >
+        创建多媒体元素
       </el-button>
     </el-row>
   </div>
@@ -97,12 +98,11 @@ export default {
       return JSON.stringify(this.insertMediaData, null, 2);
     },
   },
-  
+
   methods: {
     insertMediaElement() {
       window.external.InsertMedia(this.insertMediaDataJson);
     },
   },
-
 };
 </script>
