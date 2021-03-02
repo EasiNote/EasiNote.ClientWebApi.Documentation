@@ -8,6 +8,7 @@ const DebugPage1 = () => import('../components/DebugPage1.vue')
 const DebugPage2 = () => import('../components/DebugPage2.vue')
 const DebugPage3 = () => import('../components/DebugPage3.vue')
 const DebugPage4 = () => import('../components/DebugPage4.vue')
+const DebugPage5 = () => import('../components/DebugPage5.vue')
 
 
 const routes = [{
@@ -30,7 +31,11 @@ const routes = [{
   {
     path: "/debugPage4",
     component: DebugPage4
-  }
+  },
+  {
+    path: "/debugPage5",
+    component: DebugPage5
+  },
 
 ]
 

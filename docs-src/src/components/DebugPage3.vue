@@ -113,7 +113,7 @@
       </el-col>
 
       <el-col :span="6">
-        <el-input type="textarea" :rows="24" v-model="webPresentationCardJson">
+        <el-input type="textarea" :rows="26" v-model="webPresentationCardJson">
         </el-input>
       </el-col>
     </el-row>
