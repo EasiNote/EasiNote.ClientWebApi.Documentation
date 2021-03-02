@@ -2,13 +2,13 @@
   <div class="grid-content">
     <h3>5 创建题库元素</h3>
 
-    <!-- <el-link
+    <el-link
       type="primary"
       target="_blank"
-      href="https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/direct-api/element-json/web-presentation-card.md"
+      href="https://gitee.com/easinote/client-web-api-documentation/blob/master/zh-CN/apis/direct-api/element-json/question-analysis-card.md"
     >
       相关文档
-    </el-link> -->
+    </el-link>
 
     <h4>创建参数</h4>
     <el-row class="row-bg" :gutter="5">
@@ -38,7 +38,6 @@
             <el-form-item label="解析图片URL(analysisUrl)">
               <el-input v-model="questionCard.analysisUrl"></el-input>
             </el-form-item>
-
           </el-form>
         </div>
       </el-col>
@@ -71,13 +70,13 @@ export default {
           "http://files.eduuu.com/img/2011/08/18/162033_4e4ccb510ed70.jpg",
         questionContentUrl:
           "http://5b0988e595225.cdn.sohucs.com/images/20170914/e22bca324ab242f3bc91295b855f4d6d.jpeg",
-        answerUrl: "http://files.eduuu.com/img/2012/07/11/100611_4ffcdf9349df0.jpg",
-        analysisUrl: "https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/b219ebc4b74543a90234b6511b178a82b901147b.jpg",
+        answerUrl:
+          "http://files.eduuu.com/img/2012/07/11/100611_4ffcdf9349df0.jpg",
+        analysisUrl:
+          "https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/b219ebc4b74543a90234b6511b178a82b901147b.jpg",
         //isCollapsed: true,
         //scaleRatio: 1,
       },
-
-
     };
   },
 
