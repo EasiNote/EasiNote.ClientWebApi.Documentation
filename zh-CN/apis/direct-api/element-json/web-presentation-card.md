@@ -28,7 +28,7 @@ window.external.InsertElementByJson("WebPresentationCard", "{元素数据描述�
 
 测试：[EasiNote 前端回调测试](https://easinote.github.io/EasiNote.ClientWebApi.Documentation/ )
 
-选择 [3 创建 web presentation card 元素]
+选择 [3 web卡片元素]
 
 ```json
 {
