@@ -24,33 +24,32 @@ window.external.InsertElementByJson("WebPresentationCard", "{元素数据描述�
 | displayMode      | String | 否   | 授课端的web内容显示模式     | FullScreen | Window(以窗口形式显示) FullScreen(全屏显示)        |
 | layoutSize       | Size   | 是   | 元素初始大小                |            | 宽度最小值：1 高度最小值：80；参考值：(200,200)        |
 
-## json 文件示例
+## json 示例
 
 测试：[EasiNote 前端回调测试](https://easinote.github.io/EasiNote.ClientWebApi.Documentation/ )
 
-选择 [3 创建 web presentation card 元素]
+选择 [3 web卡片元素]
 
 ```json
 {
-  "cardTag": "TEST",
-  "title": "测试标题",
-  "thumbnailUri": "http://n.sinaimg.cn/sinakd20200605ac/416/w640h576/20200605/301b-iurnkpq9297963.jpg",
-  "clickTitle": "点击",
-  "offlineClickTitle": "网络错误",
+  "tag": "seewo-tiku-test",
+  "title": "希沃题库（测试）",
+  "thumbnailUrl": "http://n.sinaimg.cn/sinakd20200605ac/416/w640h576/20200605/301b-iurnkpq9297963.jpg",
+  "buttonContent": "点击",
   "editingUrl": "https://bilibili.com",
   "displayUrl": "https://www.zhihu.com/",
-  "editingPresentationSize": {
+  "editingFrameSize": {
     "width": 1000,
     "height": 500
   },
-  "displayPresentationSize": {
+  "displayFrameSize": {
     "width": 1000,
     "height": 500
   },
-  "presentationWindowTitle": "窗口标题",
-  "editingWindowIconUri": "http://n.sinaimg.cn/sinakd20200605ac/186/w640h346/20200605/a50a-iurnkpq9297973.jpg",
-  "displayWindowIconUri": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4267424444,91867147&fm=26&gp=0.jpg",
   "displayMode": "Window",
-  "zoomMode": "Scale"
+  "layoutSize": {
+    "width": 200,
+    "height": 200
+  }
 }
 ```
