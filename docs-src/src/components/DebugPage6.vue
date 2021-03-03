@@ -55,6 +55,8 @@
 </template>
 
 <script>
+import EasiNoteProxy from 'easinote-proxy';
+
 export default {
   name: "DebugPage6",
 
@@ -82,10 +84,11 @@ export default {
 
   methods: {
     createImageFoldCardson() {
-      window.external.InsertElementByJson(
-        "ImageFoldCard",
-        this.imageFoldCardJson
-      );
+      EasiNoteProxy.Proxy.insertElementByJson("ImageFoldCard", this.imageFoldCardJson);
+      // window.external.InsertElementByJson(
+      //   "ImageFoldCard",
+      //   this.imageFoldCardJson
+      // );
     },
   },
 };

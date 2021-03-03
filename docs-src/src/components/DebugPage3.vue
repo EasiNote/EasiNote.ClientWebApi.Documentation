@@ -128,6 +128,8 @@
 </template>
 
 <script>
+import EasiNoteProxy from 'easinote-proxy';
+
 export default {
   name: "DebugPage3",
 
@@ -190,10 +192,13 @@ export default {
   
   methods: {
     createWebPresentationCord() {
-      window.external.InsertElementByJson(
-        "WebPresentationCard",
-        this.webPresentationCardJson
-      );
+      EasiNoteProxy.Proxy.insertElementByJson("WebPresentationCard", this.webPresentationCardJson);
+      
+      // window.external.InsertElementByJson(
+      //   "WebPresentationCard",
+      //   this.webPresentationCardJson
+      // );
+
     },
   },
 };

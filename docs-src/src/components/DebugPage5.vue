@@ -58,6 +58,8 @@
 </template>
 
 <script>
+import EasiNoteProxy from 'easinote-proxy';
+
 export default {
   name: "DebugPage5",
 
@@ -88,10 +90,14 @@ export default {
 
   methods: {
     createQuestionCard() {
-      window.external.InsertElementByJson(
-        "QuestionAnalysisCard",
-        this.questionCardJson
-      );
+
+      EasiNoteProxy.Proxy.insertElementByJson("QuestionAnalysisCard", this.questionCardJson);
+
+      // window.external.InsertElementByJson(
+      //   "QuestionAnalysisCard",
+      //   this.questionCardJson
+      // );
+
     },
   },
 };

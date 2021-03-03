@@ -68,6 +68,8 @@
 </template>
 
 <script>
+import EasiNoteProxy from 'easinote-proxy';
+
 export default {
   name: "DebugPage4",
 
@@ -99,9 +101,11 @@ export default {
     },
   },
 
-  methods: {
+  methods: { 
     insertMediaElement() {
-      window.external.InsertMedia(this.insertMediaDataJson);
+      EasiNoteProxy.Proxy.insertMedia(this.insertMediaDataJson);
+      // window.external.InsertMedia(this.insertMediaDataJson);
+
     },
   },
 };
