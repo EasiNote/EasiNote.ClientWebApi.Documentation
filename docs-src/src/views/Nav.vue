@@ -8,6 +8,7 @@
       <el-button type="primary" @click="switchToView(3)">3 web卡片元素</el-button>
       <el-button type="primary" @click="switchToView(4)">4 多媒体元素</el-button>
       <el-button type="primary" @click="switchToView(5)">5 题库元素</el-button>
+      <el-button type="primary" @click="switchToView(6)">6 图片可折叠元素</el-button>
     </el-button-group>
     <router-view />
   </div>

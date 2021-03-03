@@ -51,7 +51,7 @@
     <el-button
       style="margin-left: 10em"
       type="primary"
-      @click="createquestionCard"
+      @click="createQuestionCard"
       >创建题库元素</el-button
     >
   </div>
@@ -87,7 +87,7 @@ export default {
   },
 
   methods: {
-    createquestionCard() {
+    createQuestionCard() {
       window.external.InsertElementByJson(
         "QuestionAnalysisCard",
         this.questionCardJson

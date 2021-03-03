@@ -9,7 +9,7 @@ const DebugPage2 = () => import('../components/DebugPage2.vue')
 const DebugPage3 = () => import('../components/DebugPage3.vue')
 const DebugPage4 = () => import('../components/DebugPage4.vue')
 const DebugPage5 = () => import('../components/DebugPage5.vue')
-
+const DebugPage6 = () => import('../components/DebugPage6.vue')
 
 const routes = [{
     path: '/',
@@ -35,6 +35,10 @@ const routes = [{
   {
     path: "/debugPage5",
     component: DebugPage5
+  },
+  {
+    path: "/debugPage6",
+    component: DebugPage6
   },
 
 ]
