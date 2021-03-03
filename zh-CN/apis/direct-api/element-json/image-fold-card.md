@@ -19,6 +19,8 @@ window.external.InsertElementByJson("ImageFoldCard", "{元素数据描述的 Jso
 | content         | String | 是   | 内容标题       |      |                                                    |
 | contentImageUrl | String | 是   | 内容图片URL    |      |                                                    |
 
+插入的元素，默认是折叠状态。
+
 ## json 示例
 
 测试：[EasiNote 前端回调测试](https://easinote.github.io/EasiNote.ClientWebApi.Documentation/ )
