@@ -20,6 +20,11 @@ interface BrowserWindowTitlebarModel {
     * TitleText：标题内容（可空）。
     */
     titleText: string;
+
+    /**
+    * DragHeight：web内容能被拖拽-->整个窗口会移动高度（针对Web端Top开始能被拖动高度）,最大值500（可空）
+    */
+    dragHeight: number;
 }
 ```
 
@@ -28,5 +33,5 @@ interface BrowserWindowTitlebarModel {
 设置位置：
 
 ```ts
-window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindowTitlebar", "args": JSON.stringify({ "isVisible": true, "titleText": "测试标题" })}))
+window.external.InvokeMethod(JSON.stringify({ "method": "ResizeBrowserWindowTitlebar", "args": JSON.stringify({ "isVisible": true, "titleText": "测试标题","dragHeight": 120 })}))
 ```
