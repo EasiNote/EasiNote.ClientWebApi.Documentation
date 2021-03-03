@@ -1,6 +1,6 @@
 <template>
   <div class="grid-content">
-    <h3>5 创建 ImageFoldCard 元素</h3>
+    <h3>6 创建 ImageFoldCard 元素</h3>
 
     <el-link
       type="primary"
@@ -84,7 +84,7 @@ export default {
     createImageFoldCardson() {
       window.external.InsertElementByJson(
         "QuestionAnalysisCard",
-        this.imageFoldCardson
+        this.imageFoldCardJson
       );
     },
   },
