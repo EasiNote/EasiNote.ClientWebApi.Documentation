@@ -24,11 +24,11 @@ window.external.InsertElementByJson("WebPresentationCard", "{元素数据描述�
 | displayMode      | String | 否   | 授课端的web内容显示模式     | FullScreen | Window(以窗口形式显示) FullScreen(全屏显示)        |
 | layoutSize       | Size   | 是   | 元素初始大小                |            | 宽度最小值：1 高度最小值：80；参考值：(200,200)        |
 
-## json 文件示例
+## json 示例
 
 测试：[EasiNote 前端回调测试](https://easinote.github.io/EasiNote.ClientWebApi.Documentation/ )
 
-选择 [3 创建 web presentation card 元素]
+选择 [3 web卡片元素]
 
 ```json
 {
