@@ -20,7 +20,7 @@ window.external.InsertElementByJson("QuestionAnalysisCard", "{元素数据描述
 | answerUrl          | String | 是   | 答案图片URL     |      |                                                    |
 | analysisUrl        | String | 是   | 解析图片URL     |      |                                                    |
 
-## json 文件示例
+## json 示例
 
 测试：[EasiNote 前端回调测试](https://easinote.github.io/EasiNote.ClientWebApi.Documentation/ )
 
