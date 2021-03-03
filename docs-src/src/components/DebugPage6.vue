@@ -83,7 +83,7 @@ export default {
   methods: {
     createImageFoldCardson() {
       window.external.InsertElementByJson(
-        "QuestionAnalysisCard",
+        "ImageFoldCard",
         this.imageFoldCardJson
       );
     },
