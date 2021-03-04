@@ -44,15 +44,16 @@ EasiNoteProxy.Proxy.XXX('xxx');
 
 ## API
 
-### 插入多媒体
+### 1 插入多媒体
 
 ```js
 EasiNoteProxy.Proxy.insertMedia('elementJsonData');
 ```
 
-方法名：
+方法名：  
 insertMedia
-参数：
+
+参数：  
 elementData: string 元素Json数据
 
 详见：
@@ -61,16 +62,17 @@ elementData: string 元素Json数据
 
 <https://gitee.com/easinote/client-web-api-documentation/blob/master/zh-CN/apis/direct-api/InsertMedia.md>
 
-### 插入web内容卡片元素
+### 3 插入web内容卡片元素
 
 ```js
 EasiNoteProxy.Proxy.insertElementByJson('elementType','elementJsonData');
 ```
 
-方法名:
-insertElementByJson
-参数:
-elementType: string  元素类型名(WebPresentationCard)
+方法名:  
+insertElementByJson  
+
+参数:  
+elementType: string  元素类型名(WebPresentationCard)  
 elementData: string  元素Json数据
 
 详见：
@@ -85,10 +87,10 @@ elementData: string  元素Json数据
 EasiNoteProxy.Proxy.insertElementByJson('elementType','elementJsonData');
 ```
 
-方法名:
-insertElementByJson
-参数:
-elementType: string  元素类型名(ImageFoldCard)
+方法名:  
+insertElementByJson  
+参数:  
+elementType: string  元素类型名(ImageFoldCard)  
 elementData: string  元素Json数据
 
 详见：
