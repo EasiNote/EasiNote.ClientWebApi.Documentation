@@ -56,7 +56,9 @@ insertMedia
 elementData: string 元素Json数据
 
 详见：
+
 <https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/direct-api/InsertMedia.md>
+
 <https://gitee.com/easinote/client-web-api-documentation/blob/master/zh-CN/apis/direct-api/InsertMedia.md>
 
 ### 插入web内容卡片元素
@@ -72,7 +74,9 @@ elementType: string  元素类型名(WebPresentationCard)
 elementData: string  元素Json数据
 
 详见：
+
 <https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/direct-api/element-json/web-presentation-card.md>
+
 <https://gitee.com/easinote/client-web-api-documentation/blob/master/zh-CN/apis/direct-api/element-json/web-presentation-card.md>
 
 ### 插入图片可折叠卡片元素
@@ -88,5 +92,7 @@ elementType: string  元素类型名(ImageFoldCard)
 elementData: string  元素Json数据
 
 详见：
+
 <https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/direct-api/element-json/image-fold-card.md>
+
 <https://gitee.com/easinote/client-web-api-documentation/blob/master/zh-CN/apis/direct-api/element-json/image-fold-card.md>
