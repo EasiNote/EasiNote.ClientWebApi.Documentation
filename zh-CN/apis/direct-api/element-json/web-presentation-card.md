@@ -32,7 +32,7 @@ window.external.InsertElementByJson("WebPresentationCard", "{元素数据描述�
 | editingUrl       | String | 是   | 备课端内容的URL             |            |                                                    |
 | displayUrl       | String | 是   | 授课端内容的URL             |            |                                                    |
 | editingFrameSize | Size   | 是   | 备课下打开的 web 页面的大小 |            |                                                    |
-| layoutSize       | Size   | 是   | 元素初始大小                |            | 宽度最小值：1 高度最小值：80；参考值：(200,200)        |
+| layoutSize       | Size   | 是   | 元素初始大小                |            | 宽度最小值：100 高度最小值：100；参考值：(200,200)        |
 
 授课下，点击按钮打开的窗口，为全屏显示。
 
