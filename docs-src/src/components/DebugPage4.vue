@@ -19,6 +19,17 @@
             label-width="240px"
             :model="insertMediaData"
           >
+            <el-form-item label="多媒体类型(type)">
+              <el-select v-model="insertMediaData.type" placeholder="请选择">
+                <el-option
+                  v-for="item in mediaTypeOptions"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value"
+                >
+                </el-option>
+              </el-select>
+            </el-form-item>
             <el-form-item label="下载链接(url)">
               <el-input v-model="insertMediaData.url"></el-input>
             </el-form-item>
@@ -68,7 +79,7 @@
 </template>
 
 <script>
-import EasiNoteProxy from 'easinote-proxy';
+import EasiNoteProxy from "easinote-proxy";
 
 export default {
   name: "DebugPage4",
@@ -76,11 +87,27 @@ export default {
   data() {
     return {
       insertMediaData: {
+        type: "video",
         url: "http://vfx.mtime.cn/Video/2019/03/19/mp4/190319212559089721.mp4",
         fileName: "测试.mp4",
         // mode: "online",
         // isAutoPlay: true
       },
+
+      mediaTypeOptions: [
+        {
+          value: "image",
+          label: "image",
+        },
+        {
+          value: "audio",
+          label: "audio",
+        },
+        {
+          value: "video",
+          label: "video",
+        },
+      ],
 
       mediaInsertModeOptions: [
         {
@@ -101,11 +128,10 @@ export default {
     },
   },
 
-  methods: { 
+  methods: {
     insertMediaElement() {
       EasiNoteProxy.Proxy.insertMedia(this.insertMediaDataJson);
       // window.external.InsertMedia(this.insertMediaDataJson);
-
     },
   },
 };
