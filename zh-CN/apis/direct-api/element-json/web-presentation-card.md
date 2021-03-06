@@ -32,9 +32,9 @@ window.external.InsertElementByJson("WebPresentationCard", "{元素数据描述�
 | editingUrl       | String | 是   | 备课端内容的URL             |            |                                                    |
 | displayUrl       | String | 是   | 授课端内容的URL             |            |                                                    |
 | editingFrameSize | Size   | 是   | 备课下打开的 web 页面的大小 |            |                                                    |
-| displayFrameSize | Size   | 是   | 授课下打开的 web 页面的大小 |            | DisplayMode 为 Window 时有效。                      |
-| displayMode      | String | 否   | 授课端的web内容显示模式     | FullScreen | Window(以窗口形式显示) FullScreen(全屏显示)        |
-| layoutSize       | Size   | 是   | 元素初始大小                |            | 宽度最小值：1 高度最小值：80；参考值：(200,200)        |
+| layoutSize       | Size   | 是   | 元素初始大小                |            | 宽度最小值：100 高度最小值：100；参考值：(200,200)        |
+
+授课下，点击按钮打开的窗口，为全屏显示。
 
 ## json 示例
 
@@ -54,11 +54,6 @@ window.external.InsertElementByJson("WebPresentationCard", "{元素数据描述�
     "width": 1000,
     "height": 500
   },
-  "displayFrameSize": {
-    "width": 1000,
-    "height": 500
-  },
-  "displayMode": "Window",
   "layoutSize": {
     "width": 200,
     "height": 200
