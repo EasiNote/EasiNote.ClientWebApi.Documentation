@@ -15,7 +15,7 @@ EasiNoteProxy.Proxy.InsertMedia("{多媒体数据描述的 Json 对象}");
 EN window 客户端(不推荐)
 
 ```js
-window.external.InsertMedia("{多媒体数据描述的 Json 对象}")
+window.external.InsertMedia("{多媒体数据描述的 Json 对象}");
 ```
 
 ### 参数说明
@@ -24,6 +24,7 @@ json 对象字段：
 
 | 参数名称 | 类型   | 必需 | 描述                          | 默认 | 备注             |
 |----------|--------|-----|-----------------------------|------|------------------|
+| type     | String | 是   | 类型标识：image,audio,video    |      |                  |
 | url      | String | 是   | http(s) 下载链接，可以没有后缀 |      |                  |
 | fileName | String | 是   | 文件名，必须有后缀             |      | 用户看到的文件名 |
 
@@ -39,6 +40,7 @@ PS：
 
 ```json
 {
+  "type": "video",
   "url": "http://vfx.mtime.cn/Video/2019/03/19/mp4/190319212559089721.mp4",
   "fileName": "测试.mp4",
 }
