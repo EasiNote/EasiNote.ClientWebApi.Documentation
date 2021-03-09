@@ -130,6 +130,7 @@ export default {
 
   methods: {
     insertMediaElement() {
+      console.log(`创建多媒体元素\r\n${this.insertMediaDataJson}`);
       EasiNoteProxy.Proxy.insertMedia(this.insertMediaDataJson);
       // window.external.InsertMedia(this.insertMediaDataJson);
     },

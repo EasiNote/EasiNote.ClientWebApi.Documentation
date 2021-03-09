@@ -133,6 +133,8 @@ export default {
       }
 
       eval(code);
+
+      console.log(`eval:\r\n${code}`);
     },
 
   },

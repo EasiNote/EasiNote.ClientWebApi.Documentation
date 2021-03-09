@@ -216,9 +216,11 @@ export default {
 
   methods: {
     invokeCommonMethod() {
+      console.log(`InvokeMethod\r\n${this.commonInvokeMethodJson}`);
       window.external.InvokeMethod(this.commonInvokeMethodJson);
     },
     invokeCommonMethod2() {
+      console.log(`InvokeMethod\r\n${this.commonInvokeMethodJson2}`);
       window.external.InvokeMethod(this.commonInvokeMethodJson2);
     },
     switchToView(index) {

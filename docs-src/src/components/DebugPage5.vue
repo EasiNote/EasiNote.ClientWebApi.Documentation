@@ -91,6 +91,7 @@ export default {
   methods: {
     createQuestionCard() {
 
+      console.log(`创建题目元素\r\n${this.questionCardJson}`);
       EasiNoteProxy.Proxy.insertElementByJson("QuestionAnalysisCard", this.questionCardJson);
 
       // window.external.InsertElementByJson(

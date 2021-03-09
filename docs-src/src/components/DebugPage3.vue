@@ -121,7 +121,7 @@
     <el-button
       style="margin-left: 10em"
       type="primary"
-      @click="createWebPresentationCord"
+      @click="createWebPresentationCard"
       >创建 web presentation card 元素</el-button
     >
   </div>
@@ -191,7 +191,8 @@ export default {
   },
   
   methods: {
-    createWebPresentationCord() {
+    createWebPresentationCard() {
+      console.log(`创建 web 卡片元素(WebPresentationCard)\r\n${this.webPresentationCardJson}`);
       EasiNoteProxy.Proxy.insertElementByJson("WebPresentationCard", this.webPresentationCardJson);
       
       // window.external.InsertElementByJson(

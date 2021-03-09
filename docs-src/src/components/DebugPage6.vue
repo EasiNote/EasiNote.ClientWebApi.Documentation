@@ -84,6 +84,7 @@ export default {
 
   methods: {
     createImageFoldCardson() {
+      console.log(`创建图片可折叠元素\r\n${this.imageFoldCardJson}`);
       EasiNoteProxy.Proxy.insertElementByJson("ImageFoldCard", this.imageFoldCardJson);
       // window.external.InsertElementByJson(
       //   "ImageFoldCard",
