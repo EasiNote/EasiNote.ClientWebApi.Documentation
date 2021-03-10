@@ -58,7 +58,7 @@
                 </el-col>
               </el-row>
             </el-form-item>
-            <el-form-item label="授课端窗口大小(displayFrameSize)">
+            <!-- <el-form-item label="授课端窗口大小(displayFrameSize)">
               <el-row class="row-bg" :gutter="5">
                 <el-col :span="6">
                   <div class="grid-content bg-purple-light">
@@ -77,8 +77,8 @@
                   </div>
                 </el-col>
               </el-row>
-            </el-form-item>
-            <el-form-item label="授课端 web 页窗口的显示模式(displayMode)">
+            </el-form-item> -->
+            <!-- <el-form-item label="授课端 web 页窗口的显示模式(displayMode)">
               <el-select
                 v-model="webPresentationCard.displayMode"
                 placeholder="请选择"
@@ -91,7 +91,7 @@
                 >
                 </el-option>
               </el-select>
-            </el-form-item>
+            </el-form-item> -->
             <el-form-item label="元素初始大小(layoutSize)">
               <el-row class="row-bg" :gutter="5">
                 <el-col :span="6">
@@ -149,11 +149,11 @@ export default {
           width: 1000,
           height: 500,
         },
-        displayFrameSize: {
-          width: 1000,
-          height: 500,
-        },
-        displayMode: "Window",
+        // displayFrameSize: {
+        //   width: 1000,
+        //   height: 500,
+        // },
+        // displayMode: "Window",
         layoutSize: {
           width: 200,
           height: 200,
