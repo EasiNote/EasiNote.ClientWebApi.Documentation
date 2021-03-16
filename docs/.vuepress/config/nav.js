@@ -4,8 +4,13 @@ module.exports = [{
         icon: 'reco-home'
     },
     {
-        text: '文档',
+        text: 'Guide',
         icon: 'reco-document',
+        link: '/guide/'
+    },
+    {
+        text: '文档',
+        icon: 'reco-api',
         items: [{
                 text: "invoke-api",
                 link: "/apis/invoke-api/",
@@ -23,6 +28,11 @@ module.exports = [{
                 link: "/apis/npm/",
             },
         ]
+    },
+    {
+        text: 'Debug',
+        icon: 'reco-other',
+        link: '/debug-pages/'
     },
     {
         text: 'About',
