@@ -7,8 +7,10 @@
 
 npm 包(推荐)  
 
-详见：
-[npm easinote-proxy](https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/npm/easinote-proxy.md)
+这种方式同时支持 EN5 Windows 客户端和 ENOW（web网页）端，内部会做自动判断。
+
+详见：  
+[npm easinote-proxy](https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/npm/easinote-proxy.md)  
 [npm easinote-proxy - gitee](https://gitee.com/easinote/client-web-api-documentation/blob/master/zh-CN/apis/npm/easinote-proxy.md)
 
 ```js
@@ -16,6 +18,8 @@ EasiNoteProxy.Proxy.insertElementByJson('ImageFoldCard','{元素数据描述的 
 ```
 
 EN window 客户端(不推荐)
+
+这种方式仅限于 EN5 Windows 客户端，ENOW（web网页）端不支持。
 
 ```js
 window.external.InsertElementByJson("ImageFoldCard", "{元素数据描述的 Json 对象}")
