@@ -11,10 +11,12 @@
   },
   "devDependencies": {
     "vuepress": "^1.8.2",
-    "vuepress-theme-reco": "^1.6.6",
-    "vuepress-plugin-auto-sidebar": "^1.5.0"
+    "vuepress-plugin-auto-sidebar": "^1.5.0",
+    "vuepress-theme-reco": "^1.6.6"
   },
   "dependencies": {
+    "easinote-proxy": "^0.0.6",
+    "element-ui": "^2.15.1",
     "moment": "^2.29.1"
   }
 }
