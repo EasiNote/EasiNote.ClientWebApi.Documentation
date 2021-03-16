@@ -14,7 +14,7 @@
 
 示例图片：
 
-![示例图片](/img/test-svg24.svg)
+![示例图片](./img/test-svg24.svg)
 
 对应的 Data URL 格式如下：
 

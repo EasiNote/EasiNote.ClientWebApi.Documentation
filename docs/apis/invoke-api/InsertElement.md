@@ -70,7 +70,7 @@ string elementSaveInfoCollection
 3. 查看剪贴板，得知复制所得的存储数据文件路径；
 4. 去对应的文件路径中查看元素的存储数据。
 
-![剪贴板查看器](/img/use-clipboard-to-view-element-saveinfo.png)
+![剪贴板查看器](./img/use-clipboard-to-view-element-saveinfo.png)
 
 ## 调用示例
 
