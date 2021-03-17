@@ -1,13 +1,12 @@
 <template>
   <div class="grid-content">
-    <h3>2 执行自定义方法</h3>
-    <p>window.external.{自定义方法}("参数1","参数2")</p>
 
-    <p>将要执行的语句是：{{ resultJsCode2 }}</p>
+    <p>将要执行的语句是</p>
+    <highlightjs language="javascript" :code="resultJsCode2" />
 
     <h4>方法名</h4>
     <el-row class="row-bg">
-      <el-col :span="4">
+      <el-col :span="24">
         <div class="grid-content bg-purple-light">
           <el-select
             v-model="commonMethodName"
@@ -30,8 +29,8 @@
 
     <h4>参数</h4>
 
-    <el-row class="row-bg param-row" :gutter="20">
-      <el-col :span="20">
+    <el-row class="row-bg param-row" :gutter="24">
+      <el-col :span="24">
         <div class="grid-content bg-purple-light">
           <el-input
             type="textarea"
@@ -44,8 +43,8 @@
       </el-col>
     </el-row>
 
-    <el-row class="row-bg param-row" :gutter="20">
-      <el-col :span="20">
+    <el-row class="row-bg param-row" :gutter="24">
+      <el-col :span="24">
         <div class="grid-content bg-purple-light">
           <el-input
             type="textarea"
@@ -59,7 +58,7 @@
     </el-row>
 
     <el-button
-      style="margin: 1em 0em"
+      style="margin: 1em 0em; width:10em"
       type="primary"
       @click="invokeCustomMethod"
       >执行</el-button
@@ -68,7 +67,6 @@
 </template>
 
 <script>
-
 function isEmpty(obj) {
   if (typeof obj == "undefined" || obj == null || obj == "") {
     return true;
@@ -116,12 +114,13 @@ export default {
 
       return code;
     },
-
   },
 
   methods: {
-
     invokeCustomMethod() {
+      
+      console.log(`invokeCustomMethod ${this.commonMethodName}`);
+
       let code = `window.external.${this.commonMethodName}()`;
       let param1 = `${this.commonMethodParamValue1}`;
       let param2 = `${this.commonMethodParamValue2}`;
@@ -137,9 +136,7 @@ export default {
 
       console.log(`eval:\r\n${code}`);
     },
-
   },
-
 };
 </script>
 

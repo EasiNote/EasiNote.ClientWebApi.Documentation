@@ -15,8 +15,10 @@
     "vuepress-theme-reco": "^1.6.6"
   },
   "dependencies": {
+    "core-js": "2",
     "easinote-proxy": "^0.0.6",
     "element-ui": "^2.15.1",
+    "highlight.js": "^10.6.0",
     "moment": "^2.29.1"
   }
 }

@@ -1,33 +1,19 @@
 <template>
   <div>
-    <h3>1 执行通用回调 InvokeMethod</h3>
-    <div style="margin-bottom:1em">
-      <el-link
-        type="primary"
-        target="_blank"
-        href="https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/test/zh-CN/apis/README.md"
+    <el-button-group style="margin-bottom: 1em">
+      <el-button type="primary" @click="switchToView(0)">默认 API</el-button>
+      <el-button type="primary" @click="switchToView(1)"
+        >插入元素 API</el-button
       >
-        相关文档
-      </el-link>
-    </div>
-
-    <el-button-group>
-      <el-button type="primary" @click="switchToView(0)">默认</el-button>
-      <el-button type="primary" @click="switchToView(1)">插入元素</el-button>
     </el-button-group>
 
     <div class="grid-content" v-if="invokeType === 0">
-      <p>
-        window.external.InvokeMethod(JSON.stringify({ "method": "实际方法名",
-        "args": JSON.stringify({ "参数1": "值1", "参数2": "值2", "参数3": "值3"
-        })}))
-      </p>
-
-      <p>将要执行的语句是：{{ resultJsCode }}</p>
+      <p>将要执行的语句是</p>
+      <highlightjs language="javascript" :code="resultJsCode" />
 
       <h4>方法名</h4>
-      <el-row class="row-bg">
-        <el-col :span="4">
+      <el-row class="row-bg" :gutter="24">
+        <el-col :span="24">
           <div class="grid-content bg-purple-light">
             <el-select
               v-model="commonMethodName"
@@ -50,8 +36,8 @@
 
       <h4>参数</h4>
 
-      <el-row class="row-bg" :gutter="20" style="margin-bottom: 1em">
-        <el-col :span="4">
+      <el-row class="row-bg" :gutter="24" style="margin-bottom: 1em">
+        <el-col :span="20">
           <div class="grid-content bg-purple-light">
             <el-input
               v-model="commonMethodParamName1"
@@ -59,8 +45,10 @@
             ></el-input>
           </div>
         </el-col>
+      </el-row>
 
-        <el-col :span="18">
+      <el-row class="row-bg" :gutter="24" style="margin-bottom: 1em">
+        <el-col :span="24">
           <div class="grid-content bg-purple-light">
             <el-input
               type="textarea"
@@ -73,8 +61,8 @@
         </el-col>
       </el-row>
 
-      <el-row class="row-bg" :gutter="20">
-        <el-col :span="4">
+      <el-row class="row-bg" :gutter="24" style="margin-bottom: 1em">
+        <el-col :span="20">
           <div class="grid-content bg-purple-light">
             <el-input
               v-model="commonMethodParamName2"
@@ -82,8 +70,10 @@
             ></el-input>
           </div>
         </el-col>
+      </el-row>
 
-        <el-col :span="18">
+      <el-row class="row-bg" :gutter="24">
+        <el-col :span="24">
           <div class="grid-content bg-purple-light">
             <el-input
               type="textarea"
@@ -96,20 +86,21 @@
         </el-col>
       </el-row>
 
-      <el-button type="primary" @click="invokeCommonMethod">执行</el-button>
+      <el-button
+        type="primary"
+        style="margin-top: 1em; width: 10em"
+        @click="invokeCommonMethod"
+        >执行</el-button
+      >
     </div>
 
     <div class="grid-content" v-if="invokeType === 1">
-      <p>
-        window.external.InvokeMethod(JSON.stringify({ "method":
-        "实际方法名","args": "参数值" )}))
-      </p>
-
-      <p>将要执行的语句是：{{ resultJsCode2 }}</p>
+      <p>将要执行的语句是:</p>
+      <highlightjs language="javascript" :code="resultJsCode2" />
 
       <h4>方法名</h4>
-      <el-row class="row-bg">
-        <el-col :span="4">
+      <el-row class="row-bg" :gutter="24">
+        <el-col :span="24">
           <div class="grid-content bg-purple-light">
             <el-select
               v-model="commonMethodName"
@@ -132,8 +123,8 @@
 
       <h4>参数</h4>
 
-      <el-row class="row-bg" :gutter="22" style="margin-bottom: 1em">
-        <el-col :span="22">
+      <el-row class="row-bg" :gutter="24" style="margin-bottom: 1em">
+        <el-col :span="24">
           <div class="grid-content bg-purple-light">
             <el-input
               type="textarea"
@@ -152,7 +143,6 @@
 </template>
 
 <script>
-
 export default {
   name: "DebugPageInvoke",
 
@@ -175,6 +165,7 @@ export default {
           label: "InsertMedia",
         },
       ],
+      
     };
   },
 
@@ -228,6 +219,5 @@ export default {
       this.invokeType = index;
     },
   },
-
 };
 </script>
