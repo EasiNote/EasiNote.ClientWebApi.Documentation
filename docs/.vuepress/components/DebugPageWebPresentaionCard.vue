@@ -1,8 +1,13 @@
 <template>
   <div class="grid-content">
 
-    <h3>创建参数</h3>
-    
+    <div id="createPanel">
+      <h3>创建参数</h3>
+      <el-button type="primary" @click="createWebPresentationCard"
+        >创建 web presentation card 元素</el-button
+      >
+    </div>
+
     <el-row class="row-bg" :gutter="5">
       <el-col :span="24">
         <div class="grid-content bg-purple-light">
@@ -121,7 +126,6 @@
       @click="createWebPresentationCard"
       >创建 web presentation card 元素</el-button
     >
-    
   </div>
 </template>
 
@@ -210,3 +214,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+#createPanel {
+  display: flex;
+  justify-content: space-between;
+}
+</style>

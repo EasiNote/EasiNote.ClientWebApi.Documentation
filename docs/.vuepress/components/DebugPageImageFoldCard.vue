@@ -1,6 +1,12 @@
 <template>
   <div class="grid-content">
-    <h3>创建参数</h3>
+    
+    <div id="createPanel">
+      <h3>创建参数</h3>
+      <el-button type="primary" @click="createImageFoldCardson"
+        >创建 ImageFoldCard 元素</el-button
+      >
+    </div>
 
     <el-row class="row-bg" :gutter="5">
       <el-col :span="24">
@@ -93,3 +99,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+#createPanel {
+  display: flex;
+  justify-content: space-between;
+}
+</style>

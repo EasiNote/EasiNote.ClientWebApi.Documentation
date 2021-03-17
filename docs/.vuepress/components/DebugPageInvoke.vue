@@ -8,7 +8,16 @@
     </el-button-group>
 
     <div class="grid-content" v-if="invokeType === 0">
-      <p>将要执行的语句是</p>
+      <div id="createPanel">
+        <h3>将要执行的语句是</h3>
+        <el-button
+          type="primary"
+          style="width: 10em"
+          @click="invokeCommonMethod"
+          >执行</el-button
+        >
+      </div>
+
       <highlightjs language="javascript" :code="resultJsCode" />
 
       <h4>方法名</h4>
@@ -165,7 +174,6 @@ export default {
           label: "InsertMedia",
         },
       ],
-      
     };
   },
 
@@ -221,3 +229,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+#createPanel {
+  display: flex;
+  justify-content: space-between;
+}
+</style>

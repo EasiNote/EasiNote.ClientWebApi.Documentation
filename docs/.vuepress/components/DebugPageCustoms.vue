@@ -1,10 +1,20 @@
 <template>
   <div class="grid-content">
+    
+    <div id="createPanel">
+      <div>
+        <h3 style="bottom: 0px">将要执行的语句是</h3>
+      </div>
 
-    <p>将要执行的语句是</p>
+      <el-button style="width: 10em" type="primary" @click="invokeCustomMethod"
+        >执行</el-button
+      >
+    </div>
+
     <highlightjs language="javascript" :code="resultJsCode2" />
 
-    <h4>方法名</h4>
+    <h3>方法名</h3>
+
     <el-row class="row-bg">
       <el-col :span="24">
         <div class="grid-content bg-purple-light">
@@ -27,7 +37,7 @@
       </el-col>
     </el-row>
 
-    <h4>参数</h4>
+    <h3>参数</h3>
 
     <el-row class="row-bg param-row" :gutter="24">
       <el-col :span="24">
@@ -58,7 +68,7 @@
     </el-row>
 
     <el-button
-      style="margin: 1em 0em; width:10em"
+      style="margin: 1em 0em; width: 10em"
       type="primary"
       @click="invokeCustomMethod"
       >执行</el-button
@@ -118,7 +128,6 @@ export default {
 
   methods: {
     invokeCustomMethod() {
-      
       console.log(`invokeCustomMethod ${this.commonMethodName}`);
 
       let code = `window.external.${this.commonMethodName}()`;
@@ -143,5 +152,10 @@ export default {
 <style>
 .param-row {
   margin-bottom: 1em;
+}
+
+#createPanel {
+  display: flex;
+  justify-content: space-between;
 }
 </style>

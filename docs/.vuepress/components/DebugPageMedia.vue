@@ -1,6 +1,16 @@
 <template>
   <div class="grid-content">
-    <h3>创建参数</h3>
+    
+    <div id="createPanel">
+      <h3>创建参数</h3>
+      <el-button
+        type="primary"
+        @click="insertMediaElement"
+      >
+        创建多媒体元素
+      </el-button>
+    </div>
+
     <el-row type="flex" class="row-bg" :gutter="5">
       <el-col :span="24">
         <div class="grid-content bg-purple-light">
@@ -120,3 +130,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+#createPanel {
+  display: flex;
+  justify-content: space-between;
+}
+</style>
