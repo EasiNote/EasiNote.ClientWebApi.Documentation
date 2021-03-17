@@ -1,6 +1,6 @@
 <template>
   <div class="grid-content">
-    <h3>3 创建 web presentation card 元素</h3>
+    <h3>创建 web presentation card 元素</h3>
 
     <el-link
       type="primary"

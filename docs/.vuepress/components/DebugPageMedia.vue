@@ -1,6 +1,6 @@
 <template>
   <div class="grid-content">
-    <h3>4 插入多媒体（图片，音视频）元素</h3>
+    <h3>插入多媒体（图片，音视频）元素</h3>
 
     <el-link
       type="primary"
