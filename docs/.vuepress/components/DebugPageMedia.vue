@@ -1,24 +1,10 @@
 <template>
   <div class="grid-content">
-    <h3>插入多媒体（图片，音视频）元素</h3>
-
-    <el-link
-      type="primary"
-      target="_blank"
-      href="https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/direct-api/InsertMedia.md"
-    >
-      相关文档
-    </el-link>
-
-    <h4>参数</h4>
+    <h3>创建参数</h3>
     <el-row type="flex" class="row-bg" :gutter="5">
-      <el-col :span="22">
+      <el-col :span="24">
         <div class="grid-content bg-purple-light">
-          <el-form
-            label-position="right"
-            label-width="240px"
-            :model="insertMediaData"
-          >
+          <el-form label-position="top" size="medium" :model="insertMediaData">
             <el-form-item label="多媒体类型(type)">
               <el-select v-model="insertMediaData.type" placeholder="请选择">
                 <el-option
@@ -51,30 +37,23 @@
       </el-col>
     </el-row>
 
-    <el-row
-      type="flex"
-      class="row-bg"
-      :gutter="5"
-      style="margin-left: 2em; margin-right: 10em"
-    >
-      <el-input type="textarea" :rows="4" v-model="insertMediaDataJson">
+    <h3>数据预览</h3>
+    <el-row type="flex" class="row-bg" :gutter="5" style="margin-top: 0.5em">
+      <el-input type="textarea" :rows="6" v-model="insertMediaDataJson">
       </el-input>
     </el-row>
 
-    <el-row
-      type="flex"
-      class="row-bg"
-      :gutter="5"
-      style="margin-left: 2em; margin-right: 10em"
-    >
+    <h3>创建执行</h3>
+
+    <el-row type="flex" class="row-bg" :gutter="5" style="margin-top: 0.5em">
       <el-button
-        style="margin: 1em 0em"
         type="primary"
         @click="insertMediaElement"
       >
         创建多媒体元素
       </el-button>
     </el-row>
+
   </div>
 </template>
 
@@ -136,8 +115,8 @@ export default {
     },
   },
 
-  mounted () {
+  mounted() {
     EasiNoteProxy.init();
-  }
+  },
 };
 </script>

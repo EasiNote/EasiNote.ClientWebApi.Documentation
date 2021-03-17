@@ -1,25 +1,10 @@
 <template>
   <div class="grid-content">
-    <h3>创建题库元素</h3>
-
-    <el-link
-      type="primary"
-      target="_blank"
-      href="https://gitee.com/easinote/client-web-api-documentation/blob/master/zh-CN/apis/direct-api/element-json/question-analysis-card.md"
-    >
-      相关文档
-    </el-link>
-
-    <h4>创建参数</h4>
+    <h3>创建参数</h3>
     <el-row class="row-bg" :gutter="5">
-      <el-col :span="18">
+      <el-col :span="24">
         <div class="grid-content bg-purple-light">
-          <el-form
-            label-position="right"
-            label-width="360px"
-            :model="questionCard"
-            size="medium"
-          >
+          <el-form label-position="top" :model="questionCard" size="medium">
             <el-form-item label="标签(tag)">
               <el-input v-model="questionCard.tag"></el-input>
             </el-form-item>
@@ -41,15 +26,21 @@
           </el-form>
         </div>
       </el-col>
+    </el-row>
 
-      <el-col :span="6">
-        <el-input type="textarea" :rows="18" v-model="questionCardJson">
+    <h3>数据预览</h3>
+
+    <el-row class="row-bg" :gutter="5">
+      <el-col :span="24">
+        <el-input type="textarea" :rows="10" v-model="questionCardJson">
         </el-input>
       </el-col>
     </el-row>
 
+    <h3>创建执行</h3>
+
     <el-button
-      style="margin-left: 10em"
+      style="margin-top: 0.1em"
       type="primary"
       @click="createQuestionCard"
       >创建题库元素</el-button
@@ -58,7 +49,7 @@
 </template>
 
 <script>
-import EasiNoteProxy from 'easinote-proxy';
+import EasiNoteProxy from "easinote-proxy";
 
 export default {
   name: "DebugPageTiku",
@@ -90,21 +81,21 @@ export default {
 
   methods: {
     createQuestionCard() {
-
       console.log(`创建题目元素\r\n${this.questionCardJson}`);
-      EasiNoteProxy.Proxy.insertElementByJson("QuestionAnalysisCard", this.questionCardJson);
+      EasiNoteProxy.Proxy.insertElementByJson(
+        "QuestionAnalysisCard",
+        this.questionCardJson
+      );
 
       // window.external.InsertElementByJson(
       //   "QuestionAnalysisCard",
       //   this.questionCardJson
       // );
-
     },
   },
 
-  mounted () {
+  mounted() {
     EasiNoteProxy.init();
-  }
-
+  },
 };
 </script>

@@ -1,22 +1,13 @@
 <template>
   <div class="grid-content">
-    <h3>创建 web presentation card 元素</h3>
 
-    <el-link
-      type="primary"
-      target="_blank"
-      href="https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/direct-api/element-json/web-presentation-card.md"
-    >
-      相关文档
-    </el-link>
-
-    <h4>创建参数</h4>
+    <h3>创建参数</h3>
+    
     <el-row class="row-bg" :gutter="5">
-      <el-col :span="18">
+      <el-col :span="24">
         <div class="grid-content bg-purple-light">
           <el-form
-            label-position="right"
-            label-width="360px"
+            label-position="top"
             :model="webPresentationCard"
             size="medium"
           >
@@ -111,24 +102,31 @@
           </el-form>
         </div>
       </el-col>
+    </el-row>
 
-      <el-col :span="6">
-        <el-input type="textarea" :rows="26" v-model="webPresentationCardJson">
+    <h3>数据预览</h3>
+
+    <el-row class="row-bg" :gutter="5">
+      <el-col :span="24">
+        <el-input type="textarea" :rows="16" v-model="webPresentationCardJson">
         </el-input>
       </el-col>
     </el-row>
 
+    <h3>创建执行</h3>
+
     <el-button
-      style="margin-left: 10em"
+      style="margin-top: 0.1em"
       type="primary"
       @click="createWebPresentationCard"
       >创建 web presentation card 元素</el-button
     >
+    
   </div>
 </template>
 
 <script>
-import EasiNoteProxy from 'easinote-proxy';
+import EasiNoteProxy from "easinote-proxy";
 
 export default {
   name: "DebugPageWebPresentaionCard",
@@ -189,23 +187,26 @@ export default {
       return JSON.stringify(this.webPresentationCard, null, 2);
     },
   },
-  
+
   methods: {
     createWebPresentationCard() {
-      console.log(`创建 web 卡片元素(WebPresentationCard)\r\n${this.webPresentationCardJson}`);
-      EasiNoteProxy.Proxy.insertElementByJson("WebPresentationCard", this.webPresentationCardJson);
-      
+      console.log(
+        `创建 web 卡片元素(WebPresentationCard)\r\n${this.webPresentationCardJson}`
+      );
+      EasiNoteProxy.Proxy.insertElementByJson(
+        "WebPresentationCard",
+        this.webPresentationCardJson
+      );
+
       // window.external.InsertElementByJson(
       //   "WebPresentationCard",
       //   this.webPresentationCardJson
       // );
-
     },
   },
 
-  mounted () {
+  mounted() {
     EasiNoteProxy.init();
-  }
-
+  },
 };
 </script>

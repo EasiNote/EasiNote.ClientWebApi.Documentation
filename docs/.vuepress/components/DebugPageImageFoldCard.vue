@@ -1,25 +1,11 @@
 <template>
   <div class="grid-content">
-    <h3>创建 ImageFoldCard 元素</h3>
+    <h3>创建参数</h3>
 
-    <el-link
-      type="primary"
-      target="_blank"
-      href="https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/direct-api/element-json/image-fold-card.md"
-    >
-      相关文档
-    </el-link>
-
-    <h4>创建参数</h4>
     <el-row class="row-bg" :gutter="5">
-      <el-col :span="18">
+      <el-col :span="24">
         <div class="grid-content bg-purple-light">
-          <el-form
-            label-position="right"
-            label-width="360px"
-            :model="imageFoldCard"
-            size="medium"
-          >
+          <el-form label-position="top" :model="imageFoldCard" size="medium">
             <el-form-item label="标签(tag)">
               <el-input v-model="imageFoldCard.tag"></el-input>
             </el-form-item>
@@ -38,15 +24,21 @@
           </el-form>
         </div>
       </el-col>
+    </el-row>
 
-      <el-col :span="6">
-        <el-input type="textarea" :rows="16" v-model="imageFoldCardJson">
+    <h3>数据预览</h3>
+
+    <el-row class="row-bg" :gutter="5">
+      <el-col :span="24">
+        <el-input type="textarea" :rows="10" v-model="imageFoldCardJson">
         </el-input>
       </el-col>
     </el-row>
 
+    <h3>创建执行</h3>
+
     <el-button
-      style="margin-left: 10em"
+      style="margin-top: 0.5em"
       type="primary"
       @click="createImageFoldCardson"
       >创建 ImageFoldCard 元素</el-button
@@ -55,7 +47,7 @@
 </template>
 
 <script>
-import EasiNoteProxy from 'easinote-proxy';
+import EasiNoteProxy from "easinote-proxy";
 
 export default {
   name: "DebugPageImageFoldCard",
@@ -85,18 +77,19 @@ export default {
   methods: {
     createImageFoldCardson() {
       console.log(`创建图片可折叠元素\r\n${this.imageFoldCardJson}`);
-      EasiNoteProxy.Proxy.insertElementByJson("ImageFoldCard", this.imageFoldCardJson);
+      EasiNoteProxy.Proxy.insertElementByJson(
+        "ImageFoldCard",
+        this.imageFoldCardJson
+      );
       // window.external.InsertElementByJson(
       //   "ImageFoldCard",
       //   this.imageFoldCardJson
       // );
     },
-
   },
 
-  mounted () {
+  mounted() {
     EasiNoteProxy.init();
-  }
-
+  },
 };
 </script>
