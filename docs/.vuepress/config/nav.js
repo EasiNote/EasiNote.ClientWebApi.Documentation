@@ -4,7 +4,7 @@ module.exports = [{
         icon: 'reco-home'
     },
     {
-        text: 'Guide',
+        text: '指南',
         icon: 'reco-document',
         link: '/guide/'
     },
