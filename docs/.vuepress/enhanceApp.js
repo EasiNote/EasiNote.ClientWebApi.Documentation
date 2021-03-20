@@ -8,4 +8,11 @@ export default ({
 }) => {
     Vue.use(ElementUI);
     Vue.use(hljs.vuePlugin);
+    router.beforeEach((to, from, next) => {
+        if (to.matched.length > 0 && to.matched[0].path === "*") {
+          next("/404.html");
+        } else {
+          next();
+        }
+      });
 }

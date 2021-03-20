@@ -20,6 +20,7 @@ module.exports = {
         authorAvatar: '/assets/img/easinote.png',
         lastUpdated: "更新时间",
         nav: require("./config/nav"),
+        noFoundPageByTencent: false,
         sidebar: {
 
         },
