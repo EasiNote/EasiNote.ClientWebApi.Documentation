@@ -48,6 +48,11 @@ module.exports = [{
         text: 'About',
         icon: 'reco-account',
         link: '/about/'
+    },
+    {
+        text: 'Github',
+        icon: 'reco-github',
+        link: 'https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation'
     }
 
 ]
