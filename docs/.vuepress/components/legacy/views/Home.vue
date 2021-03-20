@@ -8,7 +8,7 @@
 
     <br />
     <br />
-    <el-link class="link" href="/"> 回到首页 </el-link>
+    <el-link class="link" href="/" target="_blank">回到首页</el-link>
     <br />
     <br />
     <br />
