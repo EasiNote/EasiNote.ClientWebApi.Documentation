@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <Nav></Nav>
+  <div id="legacy-app">
+    <Nav id="nav"></Nav>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 import Nav from "./views/Nav.vue";
 
 export default{
-  name: "App",
+  name: "LegacyApp",
   components:{
     Nav
   }
@@ -17,7 +17,7 @@ export default{
 </script>
 
 <style>
-#app {
+#legacy-app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

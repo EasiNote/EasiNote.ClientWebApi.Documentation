@@ -1,8 +1,8 @@
 ---
 title: 独立调试界面
-layout: legacy-App
+layout: legacy-LegacyApp
 ---
 
 <ClientOnly>
-  <legacy-App></legacy-App>
+  <legacy-LegacyApp></legacy-LegacyApp>
 </ClientOnly>
