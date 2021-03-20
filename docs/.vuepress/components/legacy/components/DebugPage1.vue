@@ -5,7 +5,7 @@
       <el-link
         type="primary"
         target="_blank"
-        href="https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/test/zh-CN/apis/README.md"
+        href="/apis/invoke-api/"
       >
         相关文档
       </el-link>

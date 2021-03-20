@@ -1,11 +1,11 @@
 <template>
   <div class="grid-content">
-    <h3>5 创建题库元素</h3>
+    <h3>5 创建题目元素</h3>
 
     <el-link
       type="primary"
       target="_blank"
-      href="https://gitee.com/easinote/client-web-api-documentation/blob/master/zh-CN/apis/direct-api/element-json/question-analysis-card.md"
+      href="/apis/direct-api-element/question-analysis-card.html"
     >
       相关文档
     </el-link>

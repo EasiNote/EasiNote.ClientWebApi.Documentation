@@ -2,7 +2,7 @@
   <div>
     <h2>EasiNote 前端回调测试页面</h2>
     <el-button-group>
-      <el-button type="primary" @click="switchToView(0)">0 首页</el-button>
+      <el-button type="primary" @click="switchToView(0)">0 说明</el-button>
       <el-button type="primary" @click="switchToView(1)">1 InvokeMethod</el-button>
       <el-button type="primary" @click="switchToView(2)">2 自定义方法</el-button>
       <el-button type="success" @click="switchToView(3)">3 web卡片元素</el-button>

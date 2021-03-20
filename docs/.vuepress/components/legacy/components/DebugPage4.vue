@@ -5,7 +5,7 @@
     <el-link
       type="primary"
       target="_blank"
-      href="https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/direct-api/InsertMedia.md"
+      href="/apis/direct-api/InsertMedia.html"
     >
       相关文档
     </el-link>
