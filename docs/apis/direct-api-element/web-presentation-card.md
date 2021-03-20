@@ -42,7 +42,7 @@ window.external.InsertElementByJson("WebPresentationCard", "{元素数据描述�
 
 ## json 示例
 
-测试：[web 内容卡片元素 DEBUG](debug-pages/04DebugPageWebPresentaionCard.html )
+测试：[web 内容卡片元素 DEBUG](/debug-pages/04DebugPageWebPresentaionCard.html )
 
 ```json
 {

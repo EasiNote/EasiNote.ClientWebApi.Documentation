@@ -45,8 +45,7 @@ npm 包详见：[easinote-proxy](/apis/npm/easinote-proxy.html)
 
 提供部分功能的调试前端页面，可直接执行相关的 API 测试调用效果。
 
-详见：[调试页面]("/apis/debug-pages/")
-
+详见：[调试页面](/apis/debug-pages/)
 
 
 
