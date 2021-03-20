@@ -20,13 +20,13 @@ git config user.email "junjiegrass@qq.com"
 git config user.name "Jasongrass"
 git add -A
 git commit -m $message
-git checkout -b press
+git checkout -b public
 # 如果发布到 https://<USERNAME>.github.io
-git push -f git@github.com:EasiNote/EasiNote.ClientWebApi.Documentation.git press
+git push -f git@github.com:EasiNote/EasiNote.ClientWebApi.Documentation.git public
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 # 发布到 gitee
-git push -f git@gitee.com:easinote/client-web-api-documentation.git press
+git push -f git@gitee.com:easinote/client-web-api-documentation.git public
 
 cd -
