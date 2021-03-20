@@ -16,6 +16,8 @@ EasiNoteProxy.Proxy.InsertMedia("{多媒体数据描述的 Json 对象}");
 
 EN window 客户端(不推荐，仅支持 Windows 客户端)
 
+这种方式仅限于 EN5 Windows 客户端，ENOW（web网页）端不支持。
+
 ```js
 window.external.InsertMedia("{多媒体数据描述的 Json 对象}");
 ```
