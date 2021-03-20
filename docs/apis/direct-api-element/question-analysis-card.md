@@ -1,21 +1,27 @@
 # 题目卡片元素
 
+::: warning 警告
+题目元素尚在内侧阶段，不建议作为产品 API 使用，如有需要，请使用 [图片可折叠卡片元素](/apis/direct-api-element/image-fold-card.html)
+:::
+
 示例：
 [《题目卡片元素示例》](https://r302.cc/KJnY0jW?platform=enpc&channel=copylink)
 
 ## API
 
-npm 包(推荐)  
+::: warning 警告
+如果你的业务需要同时支持 EN5 Windows 客户端和 enow，请使用 easinote-proxy npm 包。
+:::
 
-详见：
-[npm easinote-proxy](https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/npm/easinote-proxy.md)
-[npm easinote-proxy - gitee](https://gitee.com/easinote/client-web-api-documentation/blob/master/zh-CN/apis/npm/easinote-proxy.md)
+npm 包(推荐，同时支持 EN5 Windows 客户端和 enow)  
+
+详见：[easinote-proxy](/apis/npm/easinote-proxy.html)
 
 ```js
 EasiNoteProxy.Proxy.insertElementByJson('QuestionAnalysisCard','{元素数据描述的 Json 对象}');
 ```
 
-EN window 客户端(不推荐)
+EN window 客户端(不推荐，仅支持 Windows 客户端)
 
 ```js
 window.external.InsertElementByJson("QuestionAnalysisCard", "{元素数据描述的 Json 对象}")

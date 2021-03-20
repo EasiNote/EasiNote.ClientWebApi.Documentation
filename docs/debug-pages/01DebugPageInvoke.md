@@ -3,6 +3,12 @@ title: 通用回调 InvokeMethod
 date: "2021-03-16"
 ---
 
+## 相关文档
+
+这里使用 window.external 直接调用对应的函数，当前仅限 Windows 客户端
+
+[间接 API](/apis/invoke-api/)
+
 ## 默认 API
 
 ```js

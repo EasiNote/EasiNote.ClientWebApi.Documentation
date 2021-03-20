@@ -2,17 +2,19 @@
 
 ## API
 
-npm 包(推荐)  
+::: warning 警告
+如果你的业务需要同时支持 EN5 Windows 客户端和 enow，请使用 easinote-proxy npm 包。
+:::
 
-详见：
-[npm easinote-proxy](https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/blob/master/zh-CN/apis/npm/easinote-proxy.md)
-[npm easinote-proxy - gitee](https://gitee.com/easinote/client-web-api-documentation/blob/master/zh-CN/apis/npm/easinote-proxy.md)
+npm 包(推荐，同时支持 EN5 Windows 客户端和 enow)  
+
+详见：[easinote-proxy](/apis/npm/easinote-proxy.html)
 
 ```js
 EasiNoteProxy.Proxy.InsertMedia("{多媒体数据描述的 Json 对象}");
 ```
 
-EN window 客户端(不推荐)
+EN window 客户端(不推荐，仅支持 Windows 客户端)
 
 ```js
 window.external.InsertMedia("{多媒体数据描述的 Json 对象}");

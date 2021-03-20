@@ -1,19 +1,48 @@
-# 希沃白板 Web 插件 API
+---
+title: 首页
+date: '2021-03-16'
+---
 
-## Web 页面与客户端程序的基本调用入门
+本组页面是间接 API 相关的描述
 
-所有基础公开 API 都在 `window.external` 中，例如我们有一个 `Foo` 方法，需要传入一个 JSON 对象的字符串，则调用为：
+## 间接 API
+
+间接 API 是指，所有的函数调用，都是调用 `InvokeMethod` 这一个方法，而在这个方法的参数中，传递具体要调用的功能。
+
+`InvokeMethod` 的方法参数为一个对象的 Json 序列化字符串。
 
 ```js
-window.external.Foo(JSON.stringify({ "propertyA": "valueA", "propertyB": { "key": "value" } }))
+{
+    id: "可选参数，标识调用的唯一 ID",
+    method: "实际执行的方法名",
+    args: "方法参数"
+}
+```
+
+方法参数也是一个对象的 Json 序列化字符串。
+
+```js
+{
+    param1: "value1",
+    param2: "value2"
+}
 ```
 
 ## Web 页面与希沃白板的调用模式
 
-不过，在插件机制中，为了保持与本机代码更好的兼容性，包括方法名在内的所有方法也都使用字符串参数，因此，实际上在随后的所有方法调用都应该遵循以下模式：
+在插件机制中，为了保持与本机代码更好的兼容性，包括方法名在内的所有方法也都使用字符串参数，因此，实际上在随后的所有方法调用都应该遵循以下模式：
 
 ```js
-window.external.InvokeMethod(JSON.stringify({ "method": "实际方法名", "args": JSON.stringify({ "参数1": "值1", "参数2": "值2", "参数3": "值3" })}))
+window.external.InvokeMethod(
+    JSON.stringify({
+        "method": "实际方法名",
+        "args": JSON.stringify({
+            "参数1": "值1",
+            "参数2": "值2",
+            "参数3": "值3"
+        })
+    })
+)
 ```
 
 其中，`InvokeMethod` 中传入对象的定义为：
