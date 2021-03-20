@@ -42,9 +42,7 @@ window.external.InsertElementByJson("QuestionAnalysisCard", "{元素数据描述
 
 ## json 示例
 
-测试：[EasiNote 前端回调测试](https://easinote.github.io/EasiNote.ClientWebApi.Documentation/ )
-
-选择 [5 题库元素]
+测试：[题目元素 DEBUG](/debug-pages/06DebugPageTiku.html )
 
 ```json
 {

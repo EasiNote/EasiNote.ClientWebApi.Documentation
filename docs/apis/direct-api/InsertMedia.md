@@ -38,9 +38,7 @@ PS：
 
 ## 示例
 
-测试：[EasiNote 前端回调测试](https://easinote.github.io/EasiNote.ClientWebApi.Documentation/ )
-
-选择 [4 插入多媒体（图片，音视频）元素]
+测试：[多媒体元素 DEBUG](/debug-pages/03DebugPageMedia.html)
 
 ```json
 {

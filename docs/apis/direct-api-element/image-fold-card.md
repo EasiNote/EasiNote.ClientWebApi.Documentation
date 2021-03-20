@@ -39,9 +39,7 @@ window.external.InsertElementByJson("ImageFoldCard", "{元素数据描述的 Jso
 
 ## json 示例
 
-测试：[EasiNote 前端回调测试](https://easinote.github.io/EasiNote.ClientWebApi.Documentation/ )
-
-选择 [6 图片可折叠元素]
+测试：[图片可折叠元素 DEBUG](/debug-pages/05DebugPageImageFoldCard.html )
 
 ```json
 {
