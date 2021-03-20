@@ -135,5 +135,10 @@ export default {
       // window.external.InsertMedia(this.insertMediaDataJson);
     },
   },
+
+  mounted() {
+    EasiNoteProxy.init();
+  },
+
 };
 </script>

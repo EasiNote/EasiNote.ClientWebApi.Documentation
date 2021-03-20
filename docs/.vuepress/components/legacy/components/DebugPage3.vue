@@ -128,7 +128,7 @@
 </template>
 
 <script>
-import EasiNoteProxy from 'easinote-proxy';
+import EasiNoteProxy from "easinote-proxy";
 
 export default {
   name: "DebugPage3",
@@ -189,18 +189,27 @@ export default {
       return JSON.stringify(this.webPresentationCard, null, 2);
     },
   },
-  
+
   methods: {
     createWebPresentationCard() {
-      console.log(`创建 web 卡片元素(WebPresentationCard)\r\n${this.webPresentationCardJson}`);
-      EasiNoteProxy.Proxy.insertElementByJson("WebPresentationCard", this.webPresentationCardJson);
-      
+      console.log(
+        `创建 web 卡片元素(WebPresentationCard)\r\n${this.webPresentationCardJson}`
+      );
+      EasiNoteProxy.Proxy.insertElementByJson(
+        "WebPresentationCard",
+        this.webPresentationCardJson
+      );
+
       // window.external.InsertElementByJson(
       //   "WebPresentationCard",
       //   this.webPresentationCardJson
       // );
-
     },
   },
+
+  mounted() {
+    EasiNoteProxy.init();
+  },
+  
 };
 </script>

@@ -92,5 +92,10 @@ export default {
       // );
     },
   },
+
+  mounted() {
+    EasiNoteProxy.init();
+  },
+
 };
 </script>

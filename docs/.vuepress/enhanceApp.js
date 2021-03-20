@@ -8,6 +8,11 @@ export default ({
 }) => {
     Vue.use(ElementUI);
     Vue.use(hljs.vuePlugin);
+
+    import('easinote-proxy').then(function (m) {
+      Vue.use(m.default)
+    });
+
     router.beforeEach((to, from, next) => {
         if (to.matched.length > 0 && to.matched[0].path === "*") {
           next("/404.html");
