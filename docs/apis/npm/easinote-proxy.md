@@ -1,6 +1,10 @@
-# npm 包 easinote-proxy
+---
+title: easinote-proxy
+date: '2021-03-16'
+---
 
-安装: npm install easinote-proxy@latest
+安装  
+`npm install easinote-proxy@latest`
 
 ## 作用
 

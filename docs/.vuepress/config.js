@@ -16,7 +16,7 @@ module.exports = {
     theme: 'reco',
     themeConfig: {
         logo: '/assets/img/easinote.png',
-        author: 'EasiNote 文档',
+        author: '希沃白板团队',
         authorAvatar: '/assets/img/easinote.png',
         lastUpdated: "更新时间",
         nav: require("./config/nav"),
