@@ -10,6 +10,7 @@
     "deploy": "sh ./deploy.sh"
   },
   "devDependencies": {
+    "@vuepress/plugin-register-components": "^1.8.2",
     "vuepress": "^1.8.2",
     "vuepress-plugin-auto-sidebar": "^1.5.0",
     "vuepress-theme-reco": "^1.6.6"
@@ -19,6 +20,7 @@
     "easinote-proxy": "^0.0.6",
     "element-ui": "^2.15.1",
     "highlight.js": "^10.6.0",
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "vuex": "^3.6.2"
   }
 }
