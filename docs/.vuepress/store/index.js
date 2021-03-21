@@ -3,8 +3,10 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+import projectConst from '../project-const'
+
 export default new Vuex.Store({
   state:{
-      basePath: "/EasiNote.ClientWebApi.Documentation/"
+      basePath: projectConst.base
   }
 })

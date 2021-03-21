@@ -1,7 +1,9 @@
+import projectConst from "./project-const"
+
 module.exports = {
-    base: '/EasiNote.ClientWebApi.Documentation/',
-    title: 'EasiNote 文档',
-    description: 'EasiNote API',
+    base: projectConst.base,
+    title: '希沃白板文档',
+    description: '希沃白板，为互动教学而生',
     head: [
         ['link', {
             rel: 'icon',
