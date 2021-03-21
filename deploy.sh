@@ -26,7 +26,8 @@ git push -f git@github.com:EasiNote/EasiNote.ClientWebApi.Documentation.git publ
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
-# 发布到 gitee
-git push -f git@gitee.com:easinote/client-web-api-documentation.git public
+
+# 发布到 gitee （需要在 project-const 修改根路径之后再编译）
+# git push -f git@gitee.com:easinote/client-web-api-documentation.git public
 
 cd -
