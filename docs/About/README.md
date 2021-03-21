@@ -12,7 +12,15 @@ autoPrev: ignore # 使 vuepress-plugin-auto-sidebar 插件自动生成侧边栏�
 希沃白板是一款由希沃（seewo）自主研发，专为老师打造的互动教学平台。
 
 别名说明：  
-希沃白板 / 希沃白板 5 / EasiNote / EasiNote 5 / EN / EN5 在本文档中通常都是指 希沃白板 Windows 客户端。
+
+* 希沃白板
+* 希沃白板 5
+* EasiNote
+* EasiNote 5
+* EN
+* EN5
+
+以上名称在本文档中通常都是指 希沃白板 Windows 客户端。
 
 除了 Windows 客户端，希沃白板还有 Web 端（[enow](https://enweb.seewo.com/)） 和希沃白板手机 APP。
 
