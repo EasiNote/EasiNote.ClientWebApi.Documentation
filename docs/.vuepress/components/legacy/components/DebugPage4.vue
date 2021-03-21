@@ -5,7 +5,7 @@
     <el-link
       type="primary"
       target="_blank"
-      href="/apis/direct-api/InsertMedia.html"
+      :href="documentUrl"
     >
       相关文档
     </el-link>
@@ -123,6 +123,10 @@ export default {
   },
 
   computed: {
+    documentUrl: function() {
+      return `${this.$store.state.basePath}apis/direct-api/InsertMedia.html`;
+    },
+
     insertMediaDataJson: function () {
       return JSON.stringify(this.insertMediaData, null, 2);
     },

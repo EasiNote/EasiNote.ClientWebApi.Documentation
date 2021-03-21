@@ -5,7 +5,7 @@
     <el-link
       type="primary"
       target="_blank"
-      href="/apis/direct-api-element/web-presentation-card.html"
+      :href="documentUrl"
     >
       相关文档
     </el-link>
@@ -185,7 +185,11 @@ export default {
   },
 
   computed: {
-    webPresentationCardJson: function () {
+    documentUrl: function() {
+      return `${this.$store.state.basePath}apis/direct-api-element/web-presentation-card.html`;
+    },
+
+    webPresentationCardJson: function() {
       return JSON.stringify(this.webPresentationCard, null, 2);
     },
   },
@@ -210,6 +214,5 @@ export default {
   mounted() {
     EasiNoteProxy.init();
   },
-  
 };
 </script>

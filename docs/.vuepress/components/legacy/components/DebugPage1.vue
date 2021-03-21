@@ -5,7 +5,7 @@
       <el-link
         type="primary"
         target="_blank"
-        href="/apis/invoke-api/"
+        :href="documentUrl"
       >
         相关文档
       </el-link>
@@ -178,6 +178,10 @@ export default {
   },
 
   computed: {
+    documentUrl: function(){
+      return `${this.$store.state.basePath}apis/invoke-api/`
+    },
+
     resultJsCode: function () {
       return `window.external.InvokeMethod("${this.commonInvokeMethodJson}")`;
     },

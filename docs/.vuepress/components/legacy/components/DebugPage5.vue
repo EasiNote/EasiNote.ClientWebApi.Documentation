@@ -2,13 +2,13 @@
   <div class="grid-content">
     <h3>5 创建题目元素</h3>
 
-    <el-link
-      type="primary"
-      target="_blank"
-      href="/apis/direct-api-element/question-analysis-card.html"
-    >
+    <el-link type="primary" target="_blank" :href="documentUrl">
       相关文档
     </el-link>
+
+    <p>
+      题目元素尚在内侧阶段，不建议作为产品 API 使用，如有需要，请使用图片可折叠元素
+    </p>
 
     <h4>创建参数</h4>
     <el-row class="row-bg" :gutter="5">
@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import EasiNoteProxy from 'easinote-proxy';
+import EasiNoteProxy from "easinote-proxy";
 
 export default {
   name: "DebugPage5",
@@ -83,28 +83,31 @@ export default {
   },
 
   computed: {
-    questionCardJson: function () {
+    documentUrl: function() {
+      return `${this.$store.state.basePath}apis/direct-api-element/question-analysis-card.html`;
+    },
+    questionCardJson: function() {
       return JSON.stringify(this.questionCard, null, 2);
     },
   },
 
   methods: {
     createQuestionCard() {
-
       console.log(`创建题目元素\r\n${this.questionCardJson}`);
-      EasiNoteProxy.Proxy.insertElementByJson("QuestionAnalysisCard", this.questionCardJson);
+      EasiNoteProxy.Proxy.insertElementByJson(
+        "QuestionAnalysisCard",
+        this.questionCardJson
+      );
 
       // window.external.InsertElementByJson(
       //   "QuestionAnalysisCard",
       //   this.questionCardJson
       // );
-
     },
   },
 
   mounted() {
     EasiNoteProxy.init();
   },
-
 };
 </script>

@@ -8,11 +8,11 @@
 
     <br />
     <br />
-    <el-link class="link" href="/" target="_blank">回到首页</el-link>
+    <el-link class="link" :href="indexUrl" target="_blank">回到首页</el-link>
     <br />
     <br />
     <br />
-    <el-link class="link" href="/debug-pages/" target="_blank">
+    <el-link class="link" :href="newDebugUrl" target="_blank">
       打开新版调试页面
     </el-link>
   </div>
@@ -22,6 +22,14 @@
 export default {
   name: "Home",
   components: {},
+  computed: {
+    indexUrl: function() {
+      return `${this.$store.state.basePath}`;
+    },
+    newDebugUrl: function() {
+      return `${this.$store.state.basePath}debug-pages/`;
+    },
+  },
 };
 </script>
 
