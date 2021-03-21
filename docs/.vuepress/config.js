@@ -1,4 +1,5 @@
 module.exports = {
+    base: '/EasiNote.ClientWebApi.Documentation/',
     title: 'EasiNote 文档',
     description: 'EasiNote API',
     head: [
