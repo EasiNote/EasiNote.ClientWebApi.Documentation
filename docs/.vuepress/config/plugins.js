@@ -37,4 +37,11 @@ module.exports = {
         },
         sort: sortFn
     },
+    // "@vuepress/register-components": {
+    //     componentsDir: [
+    //         "../components/legacy/",
+    //         "../components/legacy/components/",
+    //         "../components/legacy/views/",
+    //     ]
+    // }
 }
