@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-import projectConst from '../project-const'
+const projectConst = require("../project-const.js")
 
 export default new Vuex.Store({
   state:{

@@ -1,4 +1,4 @@
-import projectConst from "./project-const"
+const projectConst = require("./project-const.js")
 
 module.exports = {
     base: projectConst.base,
