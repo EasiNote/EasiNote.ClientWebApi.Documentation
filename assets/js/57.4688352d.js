@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[57],{894:function(t,n,e){"use strict";e.r(n);var s=e(6),l=Object(s.a)({},(function(){var t=this.$createElement,n=this._self._c||t;return n("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[n("p",[this._v("将部分 API 进行了 npm 包的封装，具体 npm 包的说明，请查看相关页面。")])])}),[],!1,null,null,null);n.default=l.exports}}]);
