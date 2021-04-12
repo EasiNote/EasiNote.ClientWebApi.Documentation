@@ -16,8 +16,8 @@ time=$(date "+%Y%m%d-%H%M%S")
 message="deploy$time"
 
 git init
-git config user.email "junjiegrass@qq.com"
-git config user.name "Jasongrass"
+git config user.email "easinote@seewo.com"
+git config user.name "easinote"
 git add -A
 git commit -m $message
 git checkout -b public
