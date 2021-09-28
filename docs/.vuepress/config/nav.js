@@ -9,32 +9,32 @@ module.exports = [{
         link: '/guide/'
     },
     {
-        text: '文档(间接API)',
+        text: "API 文档",
         icon: 'reco-api',
-        link: '/apis/invoke-api/'
-    },
-    {
-        text: "文档(直接API)",
-        icon: 'reco-api',
-        items: [{
-                text: "API",
-                link: "/apis/direct-api/"
+        items: [
+            {
+                text: 'API(v1)',
+                icon: 'reco-api',
+                link: '/apis/invoke-api/'
             },
             {
-                text: "API-具体元素",
-                link: "/apis/direct-api-element/"
-            }
-        ]
-    },
-    {
-        text: "文档(其它)",
-        icon: 'reco-api',
-        items: [{
-                text: "基础类型",
+                text: "API(v1) 基础类型",
+                icon: "reco-api",
                 link: "/apis/basic-types/",
             },
             {
+                text: "API(v2)",
+                icon: 'reco-api',
+                link: "/apis/direct-api/"
+            },
+            {
+                text: "API(v2) 具体元素",
+                icon: 'reco-api',
+                link: "/apis/direct-api-element/"
+            },
+            {
                 text: "npm 包",
+                icon: "reco-document",
                 link: "/apis/npm/",
             },
         ]
