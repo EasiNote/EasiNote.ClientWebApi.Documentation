@@ -29,10 +29,11 @@ module.exports = {
     "vuepress-plugin-auto-sidebar": {
         titleMap: {
             "guide": "指南",
-            "basic-types": "基础类型",
-            "direct-api": "直接 API",
-            "direct-api-element": "直接 API(创建元素)",
-            "invoke-api": "间接 API",
+            "invoke-api": "API(v1)",
+            "basic-types": "API(v1) 基础类型",
+            "direct-api": "API(v2)",
+            "direct-api-element": "API(v2) 创建元素",
+            "extend-subject-tool": "学科工具扩展",
             "debug-pages": "调试页面",
         },
         sort: sortFn

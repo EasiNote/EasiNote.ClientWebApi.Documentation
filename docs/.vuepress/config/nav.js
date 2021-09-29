@@ -33,6 +33,11 @@ module.exports = [{
                 link: "/apis/direct-api-element/"
             },
             {
+                text: "学科工具扩展",
+                icon: "reco-document",
+                link: "/apis/extend-subject-tool/",
+            },
+            {
                 text: "npm 包",
                 icon: "reco-document",
                 link: "/apis/npm/",

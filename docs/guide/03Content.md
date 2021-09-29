@@ -11,5 +11,5 @@ title: "3 课件内容元素扩展"
 主要支持的是多媒体元素（图片，音视频）和 Web 内容呈现元素。
 具体的说明见：
 
-* [API(v2)](../apis/direct-api-element/README.md)  
+* [API(v2)](../apis/direct-api/README.md)  
 * [API(v2) 具体元素](../apis/direct-api-element/README.md)
