@@ -29,6 +29,7 @@ module.exports = {
     "vuepress-plugin-auto-sidebar": {
         titleMap: {
             "guide": "指南",
+            "api-summary": "API 概述",
             "invoke-api": "API(v1)",
             "basic-types": "API(v1) 基础类型",
             "direct-api": "API(v2)",

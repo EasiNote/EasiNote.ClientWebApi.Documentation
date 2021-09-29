@@ -13,6 +13,11 @@ module.exports = [{
         icon: 'reco-api',
         items: [
             {
+                text: 'API 概述',
+                icon: 'reco-api',
+                link: '/apis/api-summary/'
+            },
+            {
                 text: 'API(v1)',
                 icon: 'reco-api',
                 link: '/apis/invoke-api/'
