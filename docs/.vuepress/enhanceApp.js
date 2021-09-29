@@ -5,7 +5,7 @@ import 'highlight.js/styles/monokai-sublime.css'
 import Vuex from 'vuex'
 import store from './store/index.js';
 
-export default ({
+export default async ({
     Vue, options, router 
 }) => {
     Vue.use(ElementUI);
@@ -13,7 +13,8 @@ export default ({
     Vue.use(Vuex);
     Vue.mixin({ store: store });
 
-    import('easinote-proxy').then(function (m) {
+    // https://github.com/vuejs/vuepress/issues/791
+    await import('easinote-proxy').then(function (m) {
       Vue.use(m.default)
     });
 
