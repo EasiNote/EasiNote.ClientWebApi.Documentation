@@ -3,6 +3,10 @@
 示例：
 [《ImageFoldCard 示例》](https://r302.cc/1eMemMb?platform=enpc&channel=copylink)
 
+![示意图](./img/2021-09-29-19-14-50.png)
+
+![示意图](./img/2021-09-29-19-15-07.png)
+
 ## API
 
 ::: warning 警告

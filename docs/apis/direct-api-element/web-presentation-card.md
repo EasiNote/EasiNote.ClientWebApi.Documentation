@@ -3,6 +3,8 @@
 示例：
 [《Web内容卡片元素》](https://r302.cc/4z6Vvlp?platform=enpc&channel=copylink)
 
+![示意图](./img/2021-09-29-19-15-58.png)
+
 ## API
 
 ::: warning 警告
