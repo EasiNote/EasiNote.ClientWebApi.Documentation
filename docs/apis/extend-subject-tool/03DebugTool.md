@@ -2,11 +2,11 @@
 
 下载工具
 
-[EasiNote.Plugin.WebTools.DebugTool](https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/files/7250121/EasiNote.Plugin.WebTools.DebugTool.exe.zip)
+[EasiNote.Plugin.WebTools.DebugTool](https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/files/7309410/EasiNote.Plugin.WebTools.DebugTool.exe.zip)
 
 > 下载的为 ZIP 包，需要先解压。工具无需安装，直接运行即可
 
-![tool](./img/2021-09-29-16-08-38.png)
+![tool](./img/2021-10-08-15-46-52.png)
 
 相关的配置详情见 [学科工具插件配置](./02Configurations.md)
 
