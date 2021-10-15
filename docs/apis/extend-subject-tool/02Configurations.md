@@ -8,7 +8,7 @@
 | Id               | 定制工具的ID | string | 是       | SeewoSchool.WebResource.ChineseCard |
 
 * ProductGroupName  
-用于标识一系列工具的集合，一般使用内容供应商的公司  
+用于标识一系列工具的集合，一般使用内容供应商的公司名称，同一个供应商提供多个学科工具，这个值应保持一致。  
 
 * Id  
 Id 是一个插件的唯一标识符，插件服务和后台通过此 Id 来区分不同的插件Id 可以是任意的字符串，但我们建议使用 Organization.ProductName.FunctionName 形式来命名，或者使用 GUID 来命名。
