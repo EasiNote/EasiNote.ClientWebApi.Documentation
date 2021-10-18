@@ -13,6 +13,8 @@
 * Id  
 Id 是一个插件的唯一标识符，插件服务和后台通过此 Id 来区分不同的插件Id 可以是任意的字符串，但我们建议使用 Organization.ProductName.FunctionName 形式来命名，或者使用 GUID 来命名。
 
+注意，ProductGroupName 和 Id 在使用上是独立的。例如，ProductGroupName 命名为 SeewoSchool.WebResource，此时 Id 应完整命名为 SeewoSchool.WebResource.ChineseCard，而不是 ChineseCard。
+
 ---
 
 以下的配置，都是备授课分开的，两者相互独立。
