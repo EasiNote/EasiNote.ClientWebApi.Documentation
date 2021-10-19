@@ -26,8 +26,10 @@
 
 需要通过 javascript 脚本来获取到用户的信息。
 
+* 获取希沃用户ID
+
 ```js
-// 获取希沃用户信息
+// 获取希沃用户ID
 await window.externalAsync.GetAccountInfo();
 ```
 
@@ -39,6 +41,8 @@ await window.externalAsync.GetAccountInfo();
   "user_id": "smwytvyzsorknpyvnvlygjys66289121" // seewo 用户ID，用户登录之后有值
 }
 ```
+
+* 获取 OAUTH 鉴权使用的 CODE
 
 ```js
 // 根据 app_id 获取鉴权使用的 CODE (这里 http://open.seewo.com/#/service/1112/doc/1695 的 app_id 的 CODE)
@@ -55,6 +59,12 @@ await window.externalAsync.GetOpenOAuthCode('app_id');
   "code": "fb2f757941bd405db51f2ccb13660783"
 }
 ```
+
+::: warning 特别提示
+因为用户在实际使用时，可能会反复打开学科工具，为了避免每次都需要向开放平台鉴权。
+在第一次鉴权完成之后，需要将用户ID等获取到的信息保存下来（如存到 localStorage 中）。
+下一次用户打开窗口时，如果用户ID没有变（通过 GetAccountInfo 获取当前的），则不需要再次调用 GetOpenOAuthCode 进行重新鉴权操作。
+:::
 
 ## 2 使用特定的用户ID标记
 
