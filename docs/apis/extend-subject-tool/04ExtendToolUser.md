@@ -60,6 +60,8 @@ await window.externalAsync.GetOpenOAuthCode('app_id');
 }
 ```
 
+![dev tools](./img/2021-10-19-12-09-07.png)
+
 ::: warning 特别提示
 因为用户在实际使用时，可能会反复打开学科工具，为了避免每次都需要向开放平台鉴权。
 在第一次鉴权完成之后，需要将用户ID等获取到的信息保存下来（如存到 localStorage 中）。
