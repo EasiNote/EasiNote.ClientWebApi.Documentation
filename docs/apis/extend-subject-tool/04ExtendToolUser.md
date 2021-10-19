@@ -12,11 +12,9 @@
 
 希沃白板学科工具扩展提供两种方案，可以告知当前登录的用户信息。
 
-> 本质上，都是 EN5 在调用对应 URL 时，替换预设 URL 中参数占位符。
-
 ## 方案1 对接希沃开放平台
 
-如果对接了[希沃开放平台](http://open.seewo.com/#/service/1112/doc/1695) 的帐号系统进行登录，则可以直接通过 javescript API 接口获取到用户信息。
+如果对接了[希沃开放平台](http://open.seewo.com/#/service/1112/doc/1695) 的帐号系统进行登录，则可以直接通过 javascript API 接口获取到用户信息。
 
 > 希沃开放平台还可以对接第三方账号登录，相关说明见：[账号登录](../../guide/01Account.md)
 
@@ -68,7 +66,7 @@ await window.externalAsync.GetOpenOAuthCode('app_id');
 下一次用户打开窗口时，如果用户ID没有变（通过 GetAccountInfo 获取当前的），则不需要再次调用 GetOpenOAuthCode 进行重新鉴权操作。
 :::
 
-## 2 使用特定的用户ID标记
+## 方案2 URL 上使用特定的用户 ID 标记
 
 如果应用没有对接希沃开放平台，则没有第三方账号相关的数据。此时可以提供希沃用户ID。
 
