@@ -18,6 +18,9 @@ date: '2021-09-29'
 window.external.Foo(JSON.stringify({ "propertyA": "valueA", "propertyB": { "key": "value" } }))
 ```
 
+在最新版本的希沃版本客户端中，将 API 调用放在了 `window.externalAsync` 下面，建议优先使用这里的 API 版本。
+这里的 API 返回 Promise，如果有返回值，则需要 await。后续可能会移除 `window.external` 中扩展的 API。
+
 ## API 调用
 
 提供了两种 API 调用形式，上面提到的 `window.external` 是其中一种，另一种是 `npm` 包。
