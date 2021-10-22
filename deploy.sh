@@ -8,5 +8,5 @@ cd ./deploy
 echo "开始 github 的部署"
 sh ./deploy.github.sh
 
-# echo "开始 gitee 的部署"
-# sh ./deploy.gitee.sh
+echo "开始 gitee 的部署"
+sh ./deploy.gitee.sh

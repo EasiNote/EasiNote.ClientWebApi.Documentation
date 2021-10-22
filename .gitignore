@@ -79,3 +79,8 @@ docs/.vuepress/dist/
 
 # DynamoDB Local files
 .dynamodb/
+
+# 自动生成 URL 根路径相关
+basePathConst.js
+deployType
+docs/.vuepress/basePathConst.js
