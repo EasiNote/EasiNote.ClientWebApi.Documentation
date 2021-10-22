@@ -16,7 +16,7 @@
 
 如果是发布到 gitee 上，则需要先手动修改两处地方。
 
-1 `project-const.js` 中的路径  
+1 `basePathConst.js` 中的路径  
 2 修改 `deploy.sh` 中的发布仓库地址
 
 注意：**上面两个修改不要提交保存到 git 中**

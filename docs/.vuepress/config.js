@@ -1,4 +1,4 @@
-const projectConst = require("./project-const.js")
+const projectConst = require("./basePathConst.js")
 
 module.exports = {
     base: projectConst.base,
