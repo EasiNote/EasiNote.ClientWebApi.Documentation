@@ -18,6 +18,7 @@ if (deployType.trim() == "github") {
     throw new Error(`UNKNOWN DEPLOY TYPE ${deployType}`)
 }
 
+// 使用 originFile 文件中的内容，替换 basePathConst 中的内容。
 function replaceBasePathConstFileContent(originFile) {
     originFile = path.join(__dirname, originFile);
     console.log("REPLACE BasePath START", originFile)
@@ -31,6 +32,11 @@ function replaceBasePathConstFileContent(originFile) {
 
     let targetFile = path.join(__dirname, "../docs/.vuepress/basePathConst.js");
 
-    fs.writeFileSync(targetFile, data);
+    const content = `
+    // 此文件是自动生成的，请不要修改此文件中的内容，修改也无效。
+    ${data}
+    `;
+
+    fs.writeFileSync(targetFile, content);
 
 }

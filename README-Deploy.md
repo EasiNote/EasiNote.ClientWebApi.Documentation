@@ -14,11 +14,6 @@
 
 在根目录运行 `yarn deploy`
 
-如果是发布到 gitee 上，则需要先手动修改两处地方。
-
-1 `basePathConst.js` 中的路径  
-2 修改 `deploy.sh` 中的发布仓库地址
-
-注意：**上面两个修改不要提交保存到 git 中**
-
 然后运行 `yarn deploy`，完成之后，需要手动到 gitee 上更新 pages 服务，gitee 不会自动更新。
+
+> 利用发布时运行的脚本 `basePathGenrater.js`，自动处理了 github 和 gitee 根目录不一样的问题。
