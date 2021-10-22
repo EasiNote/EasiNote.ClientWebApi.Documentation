@@ -3,7 +3,7 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-rm ./deployType
+rm -rf ./deployType
 echo "github" > ./deployType
 
 node ./basePathGenrater.js
@@ -18,9 +18,6 @@ cd docs/.vuepress/dist
 
 # 如果是发布到自定义域名
 # echo 'xxx.com' > CNAME
-
-echo "test error"
-exit 445
 
 time=$(date "+%Y%m%d-%H%M%S")
 message="deploy$time"

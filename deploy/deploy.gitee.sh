@@ -3,7 +3,7 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-rm ./deployType
+rm -rf ./deployType
 echo "gitee" > ./deployType
 
 node ./basePathGenrater.js
