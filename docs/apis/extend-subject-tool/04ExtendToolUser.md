@@ -43,7 +43,7 @@ await window.externalAsync.GetAccountInfo();
 * 获取 OAUTH 鉴权使用的 CODE
 
 ```js
-// 根据 app_id 获取鉴权使用的 CODE (这里 http://open.seewo.com/#/service/1112/doc/1695 的 app_id 的 CODE)
+// 根据 app_id 获取鉴权使用的 CODE (app_id 指希沃开放平台申请的 app_id)
 await window.externalAsync.GetOpenOAuthCode('app_id');
 ```
 
