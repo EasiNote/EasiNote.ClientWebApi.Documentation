@@ -1,9 +1,7 @@
 # 账号信息相关的 API
 
-## API
-
 ::: warning 警告
-此 API 仅在 EN5 Windows 客户端支持
+这里的 API 仅在 EN5 Windows 客户端支持
 :::
 
 * 获取希沃用户ID
