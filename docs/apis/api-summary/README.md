@@ -37,6 +37,11 @@ npm 包详见：[easinote-proxy](/apis/npm/easinote-proxy.html)
 
 ## 直接 API（v2） 与间接 API（v1）
 
+::: warning 警告
+API v1 版本是早前开发阶段遗留的 API，将来可能移除或修改，请不要使用。
+如果业务场景必须使用都某个 API，请线下联系希沃白板相关人员。
+:::
+
 这是两套不同风格的 API。推荐使用 v2 版本。
 
 间接 API 是指，所有的函数调用，都是调用 `InvokeMethod` 这一个方法，而在这个方法的参数中，传递具体要调用的功能。
