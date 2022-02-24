@@ -1,9 +1,7 @@
 # 快速开始
 
-1 下载安装 [希沃白板客户端](https://easinote.seewo.com/)
-2 下载安装 [demo 演示学科工具插件](https://github.com/EasiNote/EasiNote.ClientWebApi.Documentation/files/7249803/EasiNote.Plugin.WebTools.Demo.exe.zip)
-
-> demo 演示学科工具插件，下载之后是一个 ZIP 包，需要先解压再运行。
+1 下载安装 [希沃白板客户端](https://easinote.seewo.com/)  
+2 下载安装 [演示用学科工具插件](https://drive.cvte.com/p/DdFjqXMQ-JsCGLvAEQ)
 
 重启启动 EN 客户端，打开任一课件，在备授课学科工具中，就可以找到新增的工具入口。
 

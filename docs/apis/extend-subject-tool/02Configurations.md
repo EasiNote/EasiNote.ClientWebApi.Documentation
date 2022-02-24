@@ -2,18 +2,30 @@
 
 插件配置
 
-| 配置项           | 说明         | 类型   | 是否必须 | 样例                                |
-|------------------|------------|--------|---------|-------------------------------------|
-| ProductGroupName | 产品组名称   | string | 是       | SeewoSchool.WebResource             |
-| Id               | 定制工具的ID | string | 是       | SeewoSchool.WebResource.ChineseCard |
+| 配置项          | 说明          | 类型   | 是否必须 | 样例                |
+|-----------------|-------------|--------|---------|---------------------|
+| ResourceId      | 资源/插件ID   | string | 是       | 通常是 UUID         |
+| ResrouceName    | 资源/插件名称 | string | 是       | 希沃题库            |
+| Version         | 版本          | string | 是       | 1.0.0               |
+| ToolType        | 资源类型      | string | 是       | EasiNoteSubjectTool |
+| ManifestVersion | 清单文件版本  | int    | 是       | 1                   |
 
-* ProductGroupName  
-用于标识一系列工具的集合，一般使用内容供应商的公司名称，同一个供应商提供多个学科工具，这个值应保持一致。  
+* ResourceId  
+资源/插件ID，在希沃资源中心申请。可以联系希沃工作人员提供。在开发联调阶段，可以设置为 `debugdebugdebug***` 的形式。
 
-* Id  
-Id 是一个插件的唯一标识符，插件服务和后台通过此 Id 来区分不同的插件Id 可以是任意的字符串，但我们建议使用 Organization.ProductName.FunctionName 形式来命名，或者使用 GUID 来命名。
+> 这里必须以 `debugdebugdebug` 开头，希沃白板会绕过相关的权限检查，否则插件将不可用。
 
-注意，ProductGroupName 和 Id 在使用上是独立的。例如，ProductGroupName 命名为 SeewoSchool.WebResource，此时 Id 应完整命名为 SeewoSchool.WebResource.ChineseCard，而不是 ChineseCard。
+* ResrouceName  
+资源名称，通常就是学科工具的名称
+
+* Version
+资源的版本
+
+* ToolType
+资源类型，当前只有希沃白板学科工具类型 `EasiNoteSubjectTool`
+
+* ManifestVersion
+清单文件版本，为之后的配置升级预留，当前固定为 1
 
 ---
 
@@ -24,7 +36,7 @@ Id 是一个插件的唯一标识符，插件服务和后台通过此 Id 来区�
 
 | 配置项             | 说明           | 类型   | 是否必须 | 备授课 | 样例                       |
 |--------------------|--------------|--------|---------|------|----------------------------|
-| Key                | 资源描述名称   | string | 是       | 备授课 | SeewoSchoolChineseCard     |
+| Key                | 资源Key        | string | 是       | 备授课 | 与 ResourceId 一致         |
 | Name               | 按钮的显示名称 | string | 是       | 备授课 | 希沃汉字                   |
 | ToolTipTitle       | 提示标题       | string | 是       | 备课   | 希沃汉字卡                 |
 | ToolTipDescription | 提示详情       | string | 是       | 备课   | 获取希沃汉字卡资源         |
@@ -33,7 +45,7 @@ Id 是一个插件的唯一标识符，插件服务和后台通过此 Id 来区�
 | Url                | 工具内容 URL   | string | 是       | 备授课 | https://easinote.seewo.com |
 
 * Key  
-此名称必须在所有的 UI 扩展中唯一（备授课可以相同）
+此名称必须在所有的 UI 扩展中唯一，在存在 ResourceId 时，与 ResourceId 保持一致
 
 * Name  
 2-4个字
