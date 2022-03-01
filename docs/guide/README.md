@@ -2,6 +2,12 @@
 title: "首页"
 ---
 
+::: warning
+三方资源接入相关的文档已经迁移，本文档项目暂停维护。
+
+请前往：[http://open.seewo.com/#/service/1847/doc/2279](http://open.seewo.com/#/service/1847/doc/2279) 查看三方资源接入的文档。
+:::
+
 ## 希沃白板开放平台文档
 
 希沃白板 Windows 客户端现在可以提供的开放能力：
