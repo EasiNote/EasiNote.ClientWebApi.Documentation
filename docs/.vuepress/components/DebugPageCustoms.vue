@@ -111,15 +111,15 @@ export default {
 
   computed: {
     resultJsCode2: function () {
-      let code = `window.external.${this.commonMethodName}()`;
+      let code = `window.externalAsync.${this.commonMethodName}()`;
       let param1 = `${this.commonMethodParamValue1}`;
       let param2 = `${this.commonMethodParamValue2}`;
 
       if (!isEmpty(this.commonMethodParamValue1)) {
-        code = `window.external.${this.commonMethodName}("${param1}")`;
+        code = `window.externalAsync.${this.commonMethodName}("${param1}")`;
       }
       if (!isEmpty(this.commonMethodParamValue2)) {
-        code = `window.external.${this.commonMethodName}("${param1}", "${param2}")`;
+        code = `window.externalAsync.${this.commonMethodName}("${param1}", "${param2}")`;
       }
 
       return code;
@@ -130,15 +130,15 @@ export default {
     invokeCustomMethod() {
       console.log(`invokeCustomMethod ${this.commonMethodName}`);
 
-      let code = `window.external.${this.commonMethodName}()`;
+      let code = `window.externalAsync.${this.commonMethodName}()`;
       let param1 = `${this.commonMethodParamValue1}`;
       let param2 = `${this.commonMethodParamValue2}`;
 
       if (!isEmpty(this.commonMethodParamValue1)) {
-        code = `window.external.${this.commonMethodName}(param1)`;
+        code = `window.externalAsync.${this.commonMethodName}(param1)`;
       }
       if (!isEmpty(this.commonMethodParamValue2)) {
-        code = `window.external.${this.commonMethodName}(param1, param2)`;
+        code = `window.externalAsync.${this.commonMethodName}(param1, param2)`;
       }
 
       eval(code);

@@ -1,7 +1,7 @@
 <template>
   <div class="grid-content">
     <h3>2 执行自定义方法</h3>
-    <p>window.external.{自定义方法}("参数1","参数2")</p>
+    <p>window.externalAsync.{自定义方法}("参数1","参数2")</p>
 
     <p>将要执行的语句是：{{ resultJsCode2 }}</p>
 
@@ -102,15 +102,15 @@ export default {
 
   computed: {
     resultJsCode2: function () {
-      let code = `window.external.${this.commonMethodName}()`;
+      let code = `window.externalAsync.${this.commonMethodName}()`;
       let param1 = `${this.commonMethodParamValue1}`;
       let param2 = `${this.commonMethodParamValue2}`;
 
       if (!isEmpty(this.commonMethodParamValue1)) {
-        code = `window.external.${this.commonMethodName}("${param1}")`;
+        code = `window.externalAsync.${this.commonMethodName}("${param1}")`;
       }
       if (!isEmpty(this.commonMethodParamValue2)) {
-        code = `window.external.${this.commonMethodName}("${param1}", "${param2}")`;
+        code = `window.externalAsync.${this.commonMethodName}("${param1}", "${param2}")`;
       }
 
       return code;
@@ -121,15 +121,15 @@ export default {
   methods: {
 
     invokeCustomMethod() {
-      let code = `window.external.${this.commonMethodName}()`;
+      let code = `window.externalAsync.${this.commonMethodName}()`;
       let param1 = `${this.commonMethodParamValue1}`;
       let param2 = `${this.commonMethodParamValue2}`;
 
       if (!isEmpty(this.commonMethodParamValue1)) {
-        code = `window.external.${this.commonMethodName}(param1)`;
+        code = `window.externalAsync.${this.commonMethodName}(param1)`;
       }
       if (!isEmpty(this.commonMethodParamValue2)) {
-        code = `window.external.${this.commonMethodName}(param1, param2)`;
+        code = `window.externalAsync.${this.commonMethodName}(param1, param2)`;
       }
 
       eval(code);
