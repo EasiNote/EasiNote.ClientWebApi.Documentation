@@ -1,21 +1,14 @@
 <template>
   <div class="grid-content">
-
     <div id="createPanel">
       <h3>创建参数</h3>
-      <el-button type="primary" @click="createWebPresentationCard"
-        >创建 web presentation card 元素</el-button
-      >
+      <el-button type="primary" @click="createWebPresentationCard">创建 web presentation card 元素</el-button>
     </div>
 
     <el-row class="row-bg" :gutter="5">
       <el-col :span="24">
         <div class="grid-content bg-purple-light">
-          <el-form
-            label-position="top"
-            :model="webPresentationCard"
-            size="medium"
-          >
+          <el-form label-position="top" :model="webPresentationCard" size="medium">
             <el-form-item label="标签(tag)">
               <el-input v-model="webPresentationCard.tag"></el-input>
             </el-form-item>
@@ -38,18 +31,12 @@
               <el-row class="row-bg" :gutter="5">
                 <el-col :span="6">
                   <div class="grid-content bg-purple-light">
-                    <el-input
-                      v-model="webPresentationCard.editingFrameSize.width"
-                    >
-                    </el-input>
+                    <el-input v-model="webPresentationCard.editingFrameSize.width"></el-input>
                   </div>
                 </el-col>
                 <el-col :span="6">
                   <div class="grid-content bg-purple-light">
-                    <el-input
-                      v-model="webPresentationCard.editingFrameSize.height"
-                    >
-                    </el-input>
+                    <el-input v-model="webPresentationCard.editingFrameSize.height"></el-input>
                   </div>
                 </el-col>
               </el-row>
@@ -73,7 +60,7 @@
                   </div>
                 </el-col>
               </el-row>
-            </el-form-item> -->
+            </el-form-item>-->
             <!-- <el-form-item label="授课端 web 页窗口的显示模式(displayMode)">
               <el-select
                 v-model="webPresentationCard.displayMode"
@@ -87,23 +74,30 @@
                 >
                 </el-option>
               </el-select>
-            </el-form-item> -->
+            </el-form-item>-->
             <el-form-item label="元素初始大小(layoutSize)">
               <el-row class="row-bg" :gutter="5">
                 <el-col :span="6">
                   <div class="grid-content bg-purple-light">
-                    <el-input v-model="webPresentationCard.layoutSize.width">
-                    </el-input>
+                    <el-input v-model="webPresentationCard.layoutSize.width"></el-input>
                   </div>
                 </el-col>
                 <el-col :span="6">
                   <div class="grid-content bg-purple-light">
-                    <el-input v-model="webPresentationCard.layoutSize.height">
-                    </el-input>
+                    <el-input v-model="webPresentationCard.layoutSize.height"></el-input>
                   </div>
                 </el-col>
               </el-row>
             </el-form-item>
+            <el-form-item label="应用ID(appResourceId)">
+              <el-input v-model="webPresentationCard.appResourceId"></el-input>
+            </el-form-item>
+            <el-form-item label="是否鉴权(auth)">
+              <el-switch v-model="webPresentationCard.auth"></el-switch>
+            </el-form-item>
+            <!-- <el-form-item label="内容ID(contentResourceId)">
+              <el-input v-model="webPresentationCard.contentResourceId"></el-input>
+            </el-form-item> -->
           </el-form>
         </div>
       </el-col>
@@ -113,8 +107,7 @@
 
     <el-row class="row-bg" :gutter="5">
       <el-col :span="24">
-        <el-input type="textarea" :rows="16" v-model="webPresentationCardJson">
-        </el-input>
+        <el-input type="textarea" :rows="16" v-model="webPresentationCardJson"></el-input>
       </el-col>
     </el-row>
 
@@ -124,8 +117,7 @@
       style="margin-top: 0.1em"
       type="primary"
       @click="createWebPresentationCard"
-      >创建 web presentation card 元素</el-button
-    >
+    >创建 web presentation card 元素</el-button>
   </div>
 </template>
 
@@ -160,6 +152,8 @@ export default {
           width: 200,
           height: 200,
         },
+        appResourceId: "",
+        auth: false,
       },
 
       displayModeOptions: [
