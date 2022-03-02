@@ -20,6 +20,17 @@
             :model="webPresentationCard"
             size="medium"
           >
+            <el-form-item label="具体类型">
+              <el-select v-model="webPresentationCardType" placeholder="请选择">
+                <el-option
+                  v-for="item in webPresentationCardTypes"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value"
+                >
+                </el-option>
+              </el-select>
+            </el-form-item>
             <el-form-item label="标签(tag)">
               <el-input v-model="webPresentationCard.tag"></el-input>
             </el-form-item>
@@ -143,6 +154,7 @@ export default {
 
   data() {
     return {
+      webPresentationCardType: "webPresentationCard",
       webPresentationCard: {
         tag: "seewo-tiku-test",
         title: "希沃题库（测试）",
@@ -191,6 +203,18 @@ export default {
           label: "Adaptive",
         },
       ],
+
+      webPresentationCardTypes: [
+        {
+          value: "webPresentationCard",
+          label: "webPresentationCard",
+        },
+        {
+          value: "webPresentationCard2",
+          label: "webPresentationCard2",
+        },
+      ],
+
     };
   },
 
@@ -207,10 +231,10 @@ export default {
   methods: {
     createWebPresentationCard() {
       console.log(
-        `创建 web 卡片元素(WebPresentationCard)\r\n${this.webPresentationCardJson}`
+        `创建 web 卡片元素(${this.webPresentationCardType})\r\n${this.webPresentationCardJson}`
       );
       EasiNoteProxy.Proxy.insertElementByJson(
-        "WebPresentationCard",
+        this.webPresentationCardType,
         this.webPresentationCardJson
       );
 
