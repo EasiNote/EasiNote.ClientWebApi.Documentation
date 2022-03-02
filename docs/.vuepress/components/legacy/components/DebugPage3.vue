@@ -108,6 +108,14 @@
                 </el-col>
               </el-row>
             </el-form-item>
+
+            <el-form-item label="应用ID(appResourceId)">
+              <el-input v-model="webPresentationCard.appResourceId"></el-input>
+            </el-form-item>
+            <el-form-item label="是否鉴权(auth)">
+              <el-switch v-model="webPresentationCard.auth"></el-switch>
+            </el-form-item>
+
           </el-form>
         </div>
       </el-col>
@@ -158,6 +166,8 @@ export default {
           width: 200,
           height: 200,
         },
+        appResourceId: "",
+        auth: false,
       },
 
       displayModeOptions: [

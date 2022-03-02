@@ -12,7 +12,7 @@
     <br />
     <br />
     <br />
-    <el-link class="link" :href="newDebugUrl" target="_blank">
+    <el-link class="link" :href="newDebugUrl">
       打开新版调试页面
     </el-link>
   </div>
