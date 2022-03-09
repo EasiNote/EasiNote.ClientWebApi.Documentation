@@ -16,7 +16,7 @@ npm 包(推荐，同时支持 EN5 Windows 客户端和 enow)
 详见：[easinote-proxy](/apis/npm/easinote-proxy.html)
 
 ```js
-EasiNoteProxy.Proxy.insertElementByJson('WebPresentationCard','{元素数据描述的 Json 对象}');
+EasiNoteProxy.Proxy.insertElementByJson('WebPresentationCard2','{元素数据描述的 Json 对象}');
 ```
 
 EN window 客户端(不推荐，仅支持 Windows 客户端)
@@ -24,8 +24,10 @@ EN window 客户端(不推荐，仅支持 Windows 客户端)
 这种方式仅限于 EN5 Windows 客户端，ENOW（web网页）端不支持。
 
 ```js
-window.external.InsertElementByJson("WebPresentationCard", "{元素数据描述的 Json 对象}")
+window.external.InsertElementByJson("WebPresentationCard2", "{元素数据描述的 Json 对象}")
 ```
+
+> `WebPresentationCard` 的兼容性存在一些问题，而且不支持鉴权处理，请使用 `WebPresentationCard2`
 
 ## 属性说明
 
