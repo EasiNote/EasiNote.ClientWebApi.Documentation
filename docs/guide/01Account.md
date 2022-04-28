@@ -17,6 +17,7 @@ title: "1 账号登录"
 ## 具体文档
 
 [三方学校对接希沃标准流程文档](https://shimo.im/docs/pdXYdw3pHXPr6XYw/read )
+
 [三方登录接入希沃白板 Windows 客户端](https://shimo.im/docs/WlArzGKRQQi98lA2 )
 
 ## 说明
