@@ -16,7 +16,7 @@ title: "1 账号登录"
 
 ## 具体文档
 
-[SEEWO · 希沃开放平台 · 三方授权登录介绍](http://open.seewo.com/#/service/1112/doc/1695 )
+[三方学校对接希沃标准流程文档](https://shimo.im/docs/pdXYdw3pHXPr6XYw/read )
 
 ## 说明
 
