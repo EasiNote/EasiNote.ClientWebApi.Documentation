@@ -16,6 +16,16 @@ export default{
   async mounted(){
     await EasiNoteProxy.init();
     console.log("EasiNoteProxy init");
+
+    // // 回调函数
+    // const callback = ({ type, data }) => {
+    //     // 接收从父页面推送过来的数据，开始你的业务逻辑
+    // }
+
+    // const messageSdk = EasiNoteProxy.Proxy.createIframeMessageSDK({
+    //   messageCallback: callback,  // 传入回调函数，接收从父页面推送过来的数据
+    // });
+    // messageSdk.init();
   }
 }
 
