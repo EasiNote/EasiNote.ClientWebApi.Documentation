@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "core-js": "2",
-    "easinote-proxy": "^0.0.6",
+    "easinote-proxy": "^0.1.8",
     "element-ui": "^2.15.1",
     "highlight.js": "^10.6.0",
     "moment": "^2.29.1",

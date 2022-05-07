@@ -6,11 +6,16 @@
 
 <script>
 import Nav from "./views/Nav.vue";
+import EasiNoteProxy from 'easinote-proxy';
 
 export default{
   name: "LegacyApp",
   components:{
     Nav
+  },
+  async mounted(){
+    await EasiNoteProxy.init();
+    console.log("EasiNoteProxy init");
   }
 }
 
