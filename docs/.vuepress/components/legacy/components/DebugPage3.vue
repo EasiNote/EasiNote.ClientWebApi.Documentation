@@ -107,7 +107,7 @@
             </el-form-item>
 
             <el-form-item label="关闭按钮位置(closeButtonPosition)" v-if="webPresentationCard.displayMode == 'FullScreen'">
-              <el-input v-model="webPresentationCard.closeButtonPosition"></el-input>
+              <el-input v-model="webPresentationCard.closeButtonPosition" placeholder="left,top,right,bottom"></el-input>
             </el-form-item>
 
             <el-form-item label="元素初始大小(layoutSize)">

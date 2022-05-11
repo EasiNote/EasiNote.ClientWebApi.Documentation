@@ -52,7 +52,23 @@
                 </el-col>
               </el-row>
             </el-form-item>
-            <!-- <el-form-item label="授课端窗口大小(displayFrameSize)">
+
+            <el-form-item label="授课端 web 页窗口的显示模式(displayMode)">
+              <el-select
+                v-model="webPresentationCard.displayMode"
+                placeholder="请选择"
+              >
+                <el-option
+                  v-for="item in displayModeOptions"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value"
+                >
+                </el-option>
+              </el-select>
+            </el-form-item>
+
+            <el-form-item label="授课端窗口大小(displayFrameSize)" v-if="webPresentationCard.displayMode == 'Window'">
               <el-row class="row-bg" :gutter="5">
                 <el-col :span="6">
                   <div class="grid-content bg-purple-light">
@@ -71,21 +87,12 @@
                   </div>
                 </el-col>
               </el-row>
-            </el-form-item>-->
-            <!-- <el-form-item label="授课端 web 页窗口的显示模式(displayMode)">
-              <el-select
-                v-model="webPresentationCard.displayMode"
-                placeholder="请选择"
-              >
-                <el-option
-                  v-for="item in displayModeOptions"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value"
-                >
-                </el-option>
-              </el-select>
-            </el-form-item>-->
+            </el-form-item>
+
+            <el-form-item label="关闭按钮位置(closeButtonPosition)" v-if="webPresentationCard.displayMode == 'FullScreen'">
+              <el-input v-model="webPresentationCard.closeButtonPosition" placeholder="left,top,right,bottom"></el-input>
+            </el-form-item>
+
             <el-form-item label="元素初始大小(layoutSize)">
               <el-row class="row-bg" :gutter="5">
                 <el-col :span="6">
@@ -155,11 +162,12 @@ export default {
           width: 1000,
           height: 500,
         },
-        // displayFrameSize: {
-        //   width: 1000,
-        //   height: 500,
-        // },
-        // displayMode: "Window",
+        displayFrameSize: {
+          width: 1000,
+          height: 500,
+        },
+        displayMode: "FullScreen",
+        closeButtonPosition:"",
         layoutSize: {
           width: 200,
           height: 200,
