@@ -43,6 +43,11 @@ module.exports = [{
                 link: "/apis/extend-subject-tool/",
             },
             {
+                text: "三方账号登录",
+                icon: "reco-document",
+                link: "/apis/third-account",
+            },
+            {
                 text: "npm 包",
                 icon: "reco-document",
                 link: "/apis/npm/",
