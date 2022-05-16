@@ -45,7 +45,7 @@ module.exports = [{
             {
                 text: "三方账号登录",
                 icon: "reco-document",
-                link: "/apis/third-account",
+                link: "/apis/third-account/",
             },
             {
                 text: "npm 包",

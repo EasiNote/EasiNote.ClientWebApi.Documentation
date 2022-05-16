@@ -35,6 +35,7 @@ module.exports = {
             "direct-api": "API(v2)",
             "direct-api-element": "API(v2) 创建元素",
             "extend-subject-tool": "学科工具扩展",
+            "third-account": "三方账号登录",
             "debug-pages": "调试页面",
         },
         sort: sortFn
