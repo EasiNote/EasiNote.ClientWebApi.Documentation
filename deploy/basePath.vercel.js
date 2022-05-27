@@ -4,7 +4,7 @@ module.exports = {
     // gitee: /client-web-api-documentation/
     // vercel: /
 
-    base: '/EasiNote.ClientWebApi.Doc.VercelMirror/',
+    base: '/',
     //base: '/EasiNote.ClientWebApi.Documentation/',
     //base: '/client-web-api-documentation/',
 }
