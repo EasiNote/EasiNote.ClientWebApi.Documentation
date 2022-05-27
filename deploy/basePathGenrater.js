@@ -13,6 +13,8 @@ if (deployType.trim() == "github") {
     replaceBasePathConstFileContent("basePath.github.js")
 } else if (deployType.trim() == "gitee") {
     replaceBasePathConstFileContent("basePath.gitee.js")
+} else if (deployType.trim() == "vercel") {
+    replaceBasePathConstFileContent("basePath.vercel.js")
 } else {
     console.log("UNKNOWN DEPLOY TYPE", deployType)
     throw new Error(`UNKNOWN DEPLOY TYPE ${deployType}`)
