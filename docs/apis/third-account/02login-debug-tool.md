@@ -16,7 +16,7 @@ date: '2022-05-16'
 
 ## EN5 Windows 客户端调试
 
-下载安装调试插件：[https://drive.cvte.com/p/DdFjqXMQ-JsCGLvAEQ](https://drive.cvte.com/p/DdFjqXMQ-JsCGLvAEQ) 
+下载安装调试插件：[https://drive.cvte.com/p/DSXSaOQQ-JsCGMHYEw](https://drive.cvte.com/p/DSXSaOQQ-JsCGMHYEw) 
 
 ![](./img/2022-05-16-15-54-43.png)
 
